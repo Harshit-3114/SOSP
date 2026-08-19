@@ -1,0 +1,86 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const faqs = [
+  {
+    q: "What is the minimum order quantity (MOQ)?",
+    a: "We accept orders starting from trial quantities of 1-5 drums for evaluation. For regular production orders, typical batch sizes range from 20 drums upward depending on drum specifications and size.",
+  },
+  {
+    q: "What is your typical lead time?",
+    a: "Standard lead time is 2-3 weeks from order confirmation, depending on drum specifications and order volume. Urgent requirements can be accommodated subject to production capacity availability.",
+  },
+  {
+    q: "Can you manufacture drums as per our specifications?",
+    a: "Yes, we manufacture drums as per customer specifications and requirements. Our engineering team works closely with clients to develop optimized drum designs that meet exact dimensional, load, and performance criteria.",
+  },
+  {
+    q: "What sizes of steel cable drums do you manufacture?",
+    a: "We manufacture a wide range of drum sizes to suit various cable and wire requirements. Please contact us with your specific dimensional requirements, and our team will provide the optimal solution.",
+  },
+  {
+    q: "Are your drums suitable for export / ocean freight?",
+    a: "Yes, all our drums are manufactured to international export standards, engineered for safe ocean freight and container loading. Our low-weight design matches the cost efficiency of wooden drums while delivering superior durability.",
+  },
+  {
+    q: "What certifications do you hold?",
+    a: "We are ISO 9001:2015 (Quality Management), ISO 14001:2015 (Environmental Management), and ISO 45001:2018 (Occupational Health & Safety) certified by TUV Rheinland. We also hold the prestigious ZED Gold Certification and have received State Safety Awards for 2022, 2023 & 2024.",
+  },
+  {
+    q: "Do you offer refurbished drums?",
+    a: "Yes, we refurbish steel cable drums. Each drum undergoes thorough inspection, cleaning, and reconditioning to restore its structural integrity. Refurbished drums offer significant cost savings while supporting a circular economy.",
+  },
+  {
+    q: "Can drums be supplied on a returnable basis?",
+    a: "Yes, we are developing a returnable drum program where drums can be used multiple times, significantly reducing packaging costs for our customers. Contact us to discuss returnable drum arrangements.",
+  },
+  {
+    q: "What is your monthly production capacity?",
+    a: "Our monthly manufacturing capacity is 450-500 metric tonnes, producing approximately 1500 drums per month with a daily production capacity of 45-50 drums across our 4 manufacturing units (3 in Alwar, 1 in Reengus).",
+  },
+  {
+    q: "Which industries do you serve?",
+    a: "We primarily serve the cable and wire industry, supplying steel cable drums to leading cable manufacturers across India. Our clients include Havells, KEI, Universal Cables, Finolex J-Power, and many other esteemed companies.",
+  },
+  {
+    q: "Can I visit your manufacturing facility?",
+    a: "Yes, we welcome industrial visits from potential clients and college students. You can observe our manufacturing processes and quality standards firsthand. Please contact us to schedule a visit.",
+  },
+  {
+    q: "How do I request a quotation?",
+    a: "You can request a quotation by using the contact form on our website, emailing us at info@sospackaging.com, or calling us at 0144-2881561. Please provide your drum specifications, quantity, and any special requirements.",
+  },
+];
+---
+
+<Layout
+  title="FAQ"
+  description="Frequently asked questions about Shree Om Sai Packaging steel cable drums — MOQ, lead time, customization, export suitability, certifications, and more."
+  canonical="https://www.sospackaging.com/faq"
+>
+  <section class="relative w-full h-[45vh] min-h-[300px] flex items-center justify-center overflow-hidden bg-primary">
+    <div class="absolute inset-0 bg-gradient-to-r from-neutral-dark/70 to-primary/70"></div>
+    <div class="relative z-10 text-center px-4 md:px-8 max-w-[1280px] mx-auto">
+      <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 drop-shadow-lg">Frequently Asked Questions</h1>
+      <p class="text-lg md:text-xl text-surface-gray max-w-2xl mx-auto drop-shadow-md leading-relaxed">
+        Everything you need to know about our steel cable drums and services
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 px-4 md:px-8 max-w-[860px] mx-auto">
+    <div class="space-y-4">
+      {faqs.map((faq, i) => (
+        <details class="group bg-surface-container-lowest rounded-xl border border-border-gray overflow-hidden transition-all duration-200 open:shadow-md">
+          <summary class="flex items-center justify-between gap-4 p-5 md:p-6 cursor-pointer list-none text-base md:text-lg font-semibold text-primary hover:text-primary-container transition-colors">
+            <span>{faq.q}</span>
+            <span class="material-symbols-outlined text-primary-container transition-transform duration-300 group-open:rotate-180 shrink-0">expand_more</span>
+          </summary>
+          <div class="px-5 md:px-6 pb-5 md:pb-6">
+            <p class="text-base text-on-surface-variant leading-relaxed">{faq.a}</p>
+          </div>
+        </details>
+      ))}
+    </div>
+  </section>
+</Layout>

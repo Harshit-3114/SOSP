@@ -1,0 +1,51 @@
+---
+const images = [
+  { src: "/images/actual/hero_1.webp", alt: "Steel cable drum manufacturing" },
+  { src: "/images/actual/hero_2.webp", alt: "Industrial steel packaging" },
+  { src: "/images/actual/hero_3.webp", alt: "Factory production line" },
+  { src: "/images/actual/hero_4.webp", alt: "Quality steel drums" },
+  { src: "/images/actual/hero_5.webp", alt: "Steel drum storage" },
+  { src: "/images/actual/hero_6.webp", alt: "Packaging solutions" },
+];
+---
+
+<div class="absolute inset-0 z-0">
+  {images.map((img, i) => (
+    <img
+      src={img.src}
+      alt={img.alt}
+      class="hero-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
+      style={`opacity: ${i === 0 ? 1 : 0}`}
+    />
+  ))}
+</div>
+
+<script>
+  var slides = document.querySelectorAll(".hero-slide");
+  var current = 0;
+  var total = slides.length;
+  var interval;
+
+  function showSlide(index) {
+    for (var i = 0; i < slides.length; i++) {
+      slides[i].style.opacity = i === index ? "1" : "0";
+    }
+    current = index;
+  }
+
+  function nextSlide() {
+    showSlide((current + 1) % total);
+  }
+
+  function startHero() {
+    if (interval) clearInterval(interval);
+    if (slides.length > 1) {
+      interval = setInterval(nextSlide, 4000);
+    }
+  }
+
+  if (slides.length > 0) {
+    showSlide(0);
+    startHero();
+  }
+</script>

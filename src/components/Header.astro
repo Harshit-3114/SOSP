@@ -1,0 +1,162 @@
+---
+const { currentPath = "/" } = Astro.props;
+
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/profile", label: "About Us" },
+  { href: "/products", label: "Products" },
+  { href: "/cabreel", label: "Cabreel" },
+  { href: "/gallery", label: "Gallery" },
+  { href: "/clients", label: "Clients" },
+  { href: "/faq", label: "FAQ" },
+  { href: "/contact", label: "Contact" },
+];
+
+const isActive = (href: string) => {
+  if (href === "/") return currentPath === "/";
+  return currentPath.startsWith(href);
+};
+---
+
+<header class="fixed top-0 w-full z-50">
+  <div class="bg-primary text-white text-xs font-semibold uppercase tracking-wider overflow-hidden h-9 flex items-center">
+    <div class="ticker-track flex whitespace-nowrap">
+      <span class="mx-8">OUR MOTTO IS SAVE WOOD, GO GREEN BY USING OUR ECO-FRIENDLY STEEL CABLE DRUMS</span>
+      <span class="mx-8">STEEL CABLE DRUMS ARE REUSABLE UPTO 3 TIMES</span>
+      <span class="mx-8">STEEL CABLE DRUMS RETAIN 30-35% OF THEIR COST WHEN SOLD AS SCRAP</span>
+      <span class="mx-8">OUR MOTTO IS SAVE WOOD, GO GREEN BY USING OUR ECO-FRIENDLY STEEL CABLE DRUMS</span>
+      <span class="mx-8">STEEL CABLE DRUMS ARE REUSABLE UPTO 3 TIMES</span>
+      <span class="mx-8">STEEL CABLE DRUMS RETAIN 30-35% OF THEIR COST WHEN SOLD AS SCRAP</span>
+    </div>
+  </div>
+  <div class="h-20 bg-surface-container-lowest border-b border-border-gray shadow-sm">
+    <div class="max-w-[1280px] mx-auto px-4 md:px-8 h-full flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2 font-bold text-xl text-primary shrink-0" aria-label="Home" id="header-logo-link">
+      <img
+        src="/images/actual/sosp logo.webp"
+        alt="SOSP Logo"
+        class="h-9 w-auto"
+        id="header-logo-sosp"
+      />
+      <img
+        src="/images/actual/cabreel logo.webp"
+        alt="Cabreel Logo"
+        class="h-9 w-auto hidden"
+        id="header-logo-cabreel"
+      />
+    </a>
+
+    <nav class="hidden md:flex items-center h-full gap-8">
+      {navLinks.map((link) => (
+        <a
+          href={link.href}
+          class={`text-sm uppercase tracking-wider transition-colors duration-200 h-full flex items-center pt-1 border-b-2 ${
+            isActive(link.href)
+              ? "text-primary border-primary"
+              : "text-on-surface-variant border-transparent hover:text-primary hover:border-primary"
+          }`}
+        >
+          {link.label}
+        </a>
+      ))}
+    </nav>
+
+    <a
+      href="/brochure.pdf"
+      class="hidden md:inline-flex bg-success-green text-white text-sm uppercase tracking-wider font-semibold px-6 py-3 rounded hover:bg-primary transition-all duration-200 items-center gap-1.5"
+      download
+    >
+      <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+      Brochure
+    </a>
+    <a
+      href="/contact"
+      class="hidden md:inline-flex bg-success-green text-white text-sm uppercase tracking-wider font-semibold px-6 py-3 rounded hover:bg-primary transition-all duration-200"
+    >
+      Get a Quote
+    </a>
+
+    <button id="mobile-menu-btn" class="md:hidden text-primary min-w-[48px] min-h-[48px] flex items-center justify-center" aria-label="Toggle menu" aria-expanded="false">
+      <span class="material-symbols-outlined text-3xl">menu</span>
+    </button>
+  </div>
+
+  <div id="mobile-overlay" class="hidden fixed inset-0 bg-black/40 z-40 md:hidden transition-opacity duration-300 opacity-0"></div>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-surface-container-lowest border-t border-border-gray shadow-xl transition-all duration-300 -translate-y-2 opacity-0">
+    <div class="px-4 py-6 space-y-1">
+      {navLinks.map((link) => (
+        <a
+          href={link.href}
+          class={`block text-lg font-medium px-4 py-3 rounded-lg transition-colors ${
+            isActive(link.href) ? "text-primary bg-primary/5" : "text-on-surface-variant hover:bg-surface-container-low"
+          }`}
+        >
+          {link.label}
+        </a>
+      ))}
+      <a href="/brochure.pdf" class="block mt-4 bg-success-green text-white text-center font-semibold px-6 py-4 rounded-lg uppercase tracking-wider flex items-center justify-center gap-2" download>
+        <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+        Brochure
+      </a>
+      <a href="/contact" class="block mt-2 bg-success-green text-white text-center font-semibold px-6 py-4 rounded-lg uppercase tracking-wider">
+        Get a Quote
+      </a>
+    </div>
+    </div>
+  </div>
+</header>
+
+<style is:global>
+  [data-page="cabreel"] #header-logo-sosp { display: none; }
+  [data-page="cabreel"] #header-logo-cabreel { display: inline-block !important; }
+  #header-logo-cabreel { display: none; }
+  .ticker-track {
+    animation: ticker-scroll 30s linear infinite;
+  }
+  @keyframes ticker-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+</style>
+
+<script>
+  const btn = document.getElementById("mobile-menu-btn");
+  const menu = document.getElementById("mobile-menu");
+  const overlay = document.getElementById("mobile-overlay");
+  function openMenu() {
+    btn.setAttribute("aria-expanded", "true");
+    overlay.classList.remove("hidden");
+    menu.classList.remove("hidden");
+    requestAnimationFrame(() => {
+      overlay.classList.remove("opacity-0");
+      menu.classList.remove("-translate-y-2", "opacity-0");
+      document.body.style.overflow = "hidden";
+    });
+  }
+
+  function closeMenu() {
+    btn.setAttribute("aria-expanded", "false");
+    overlay.classList.add("opacity-0");
+    menu.classList.add("-translate-y-2", "opacity-0");
+    setTimeout(() => {
+      overlay.classList.add("hidden");
+      menu.classList.add("hidden");
+      document.body.style.overflow = "";
+    }, 300);
+  }
+
+  if (btn && menu && overlay) {
+    btn.addEventListener("click", () => {
+      if (btn.getAttribute("aria-expanded") === "true") {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+    overlay.addEventListener("click", closeMenu);
+    menu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+  }
+</script>

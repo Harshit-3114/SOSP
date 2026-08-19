@@ -1,0 +1,583 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { RevealSection } from "../components/RevealSection";
+import { AnimatedCounter } from "../components/AnimatedCounter";
+import { LogoCarousel } from "../components/LogoCarousel";
+import HeroCarousel from "../components/HeroCarousel.astro";
+---
+
+<Layout title="Home" description="Shree Om Sai Packaging - Sustainable industrial steel packaging solutions. Engineered steel cable drums, corrugated drums, M.S spools. ISO 9001 certified." canonical="https://www.sospackaging.com/">
+
+  <!-- Hero -->
+  <section class="relative bg-surface-gray py-24 md:py-32 overflow-hidden flex items-center min-h-[80vh]">
+    <HeroCarousel />
+    <div class="absolute inset-0 bg-gradient-to-r from-surface-gray via-surface-gray/85 to-surface-gray/40 z-10"></div>
+    <div class="max-w-[1280px] mx-auto px-4 md:px-8 relative z-20 w-full">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-surface-container-low rounded-full mb-6 border border-border-gray">
+          <span class="material-symbols-outlined text-primary-container text-sm" style="font-variation-settings: 'FILL' 1;">eco</span>
+          <span class="text-xs uppercase tracking-widest text-primary font-semibold">Save Wood, Go Green</span>
+        </div>
+        <h1 class="text-4xl md:text-6xl font-extrabold text-primary mb-6 leading-tight tracking-tight">
+          Sustainable <span class="text-primary-container">Steel Packaging</span> Solutions
+        </h1>
+        <p class="text-lg md:text-xl text-on-surface-variant mb-10 max-w-2xl leading-relaxed">
+          Engineered precision meets environmental responsibility. We provide heavy-duty steel cable drums and industrial packaging designed to replace traditional wood — offering superior durability and a lower carbon footprint.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/contact" class="bg-success-green text-white font-semibold uppercase tracking-wider px-8 py-4 rounded hover:bg-primary hover:-translate-y-0.5 transition-all duration-200 text-center text-sm">
+            Get a Quote
+            <span class="material-symbols-outlined ml-1 align-middle text-lg">arrow_forward</span>
+          </a>
+          <a href="/products" class="bg-surface-container-lowest text-primary font-semibold uppercase tracking-wider px-8 py-4 rounded border border-border-gray hover:border-primary-container transition-all duration-200 text-center text-sm">
+            Explore Products
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <RevealSection client:visible direction="up" className="relative z-30 -mt-10 mx-4 md:mx-8 max-w-[1280px] md:mx-auto">
+    <div class="bg-surface-container-lowest rounded-xl shadow-sm border border-border-gray/50">
+      <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-border-gray">
+        <div class="p-8 flex flex-col items-start gap-4">
+          <div class="w-14 h-14 rounded-full bg-primary-container flex items-center justify-center text-white">
+            <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">design_services</span>
+          </div>
+          <h2 class="text-xl font-bold text-primary">Custom Requests</h2>
+          <p class="text-base text-on-surface-variant leading-relaxed">Tailored steel drum dimensions and specifications designed precisely to your engineering constraints.</p>
+        </div>
+        <div class="p-8 flex flex-col items-start gap-4">
+          <div class="w-14 h-14 rounded-full bg-primary-container flex items-center justify-center text-white">
+            <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">verified</span>
+          </div>
+          <h2 class="text-xl font-bold text-primary">ISO Certified</h2>
+          <p class="text-base text-on-surface-variant leading-relaxed">ISO 9001:2015, ISO 14001:2015 & ISO 45001:2018 certified — quality, environment, and safety management.</p>
+        </div>
+        <div class="p-8 flex flex-col items-start gap-4">
+          <div class="w-14 h-14 rounded-full bg-primary-container flex items-center justify-center text-white">
+            <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">factory</span>
+          </div>
+          <h2 class="text-xl font-bold text-primary">High Capacity</h2>
+          <p class="text-base text-on-surface-variant leading-relaxed">Robust production lines capable of fulfilling large-scale industrial orders with rapid turnaround times.</p>
+        </div>
+      </div>
+    </div>
+  </RevealSection>
+
+  <!-- Products -->
+  <RevealSection client:visible direction="up" className="py-16 md:py-24 px-4 md:px-8 max-w-[1280px] mx-auto" id="products">
+    <div class="text-center mb-10 md:mb-16">
+      <span class="text-sm uppercase tracking-widest text-primary-container font-semibold block mb-2">Our Capabilities</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-primary">Our Products</h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+      <div class="bg-surface-container-lowest rounded border border-border-gray overflow-hidden hover:shadow-md transition-all duration-300 flex flex-col h-full group">
+        <div class="h-36 sm:h-48 bg-surface-container-low flex items-center justify-center overflow-hidden relative">
+          <img src="/images/actual/Steel_cableDrum.webp" alt="Corrugated steel cable drum" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <span class="relative text-white font-bold text-lg text-center drop-shadow-lg z-10">CORRUGATED STEEL<br/>CABLE DRUMS</span>
+        </div>
+        <div class="p-4 md:p-6 flex flex-col flex-1">
+          <h3 class="text-lg md:text-xl font-bold text-primary mb-2 md:mb-3">Corrugated Steel Cable Drums</h3>
+          <p class="text-sm md:text-base text-on-surface-variant mb-4 md:mb-6 flex-1 leading-relaxed">Corrugated Steel Cable Drums are an alternate for wooden drums. They can be used more than one time! Also they have a recovery cost of at least 30% by scrapping them. They are eco friendly as they avoid using wood.</p>
+          <a href="/contact?product=corrugated-steel-cable-drum" class="text-sm uppercase tracking-wider text-primary hover:text-success-green transition-colors font-semibold inline-flex items-center gap-1 py-2">
+            Request Quote <span class="material-symbols-outlined text-sm">request_quote</span>
+          </a>
+        </div>
+      </div>
+      <div class="bg-surface-container-lowest rounded border border-border-gray overflow-hidden hover:shadow-md transition-all duration-300 flex flex-col h-full group">
+        <div class="h-36 sm:h-48 bg-surface-container-low flex items-center justify-center overflow-hidden relative">
+          <img src="/images/product-process-drum.webp" alt="Process drum" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <span class="relative text-white font-bold text-lg text-center drop-shadow-lg z-10">PROCESS<br/>DRUMS</span>
+        </div>
+        <div class="p-4 md:p-6 flex flex-col flex-1">
+          <h3 class="text-lg md:text-xl font-bold text-primary mb-2 md:mb-3">Process Drums</h3>
+          <p class="text-sm md:text-base text-on-surface-variant mb-4 md:mb-6 flex-1 leading-relaxed">Specialized heavy-duty steel containers designed for in-house cable twisting, sheathing, and extrusion lines with seamless integration into existing production lines.</p>
+          <a href="/contact?product=process-drum" class="text-sm uppercase tracking-wider text-primary hover:text-success-green transition-colors font-semibold inline-flex items-center gap-1 py-2">
+            Request Quote <span class="material-symbols-outlined text-sm">request_quote</span>
+          </a>
+        </div>
+      </div>
+      <div class="bg-surface-container-lowest rounded border border-border-gray overflow-hidden hover:shadow-md transition-all duration-300 flex flex-col h-full group">
+        <div class="h-36 sm:h-48 bg-surface-container-low flex items-center justify-center overflow-hidden relative">
+          <img src="/images/actual/M.S_Tie_Rods.webp" alt="M.S Tie Rods" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <span class="relative text-white font-bold text-lg text-center drop-shadow-lg z-10">M.S TIE<br/>RODS</span>
+        </div>
+        <div class="p-4 md:p-6 flex flex-col flex-1">
+          <h3 class="text-lg md:text-xl font-bold text-primary mb-2 md:mb-3">M.S Tie Rods</h3>
+          <p class="text-sm md:text-base text-on-surface-variant mb-4 md:mb-6 flex-1 leading-relaxed">High-strength mild steel tie rods providing critical tension and reinforcement to keep steel cable drums intact during transport and handling.</p>
+          <a href="/contact?product=ms-tie-rod" class="text-sm uppercase tracking-wider text-primary hover:text-success-green transition-colors font-semibold inline-flex items-center gap-1 py-2">
+            Request Quote <span class="material-symbols-outlined text-sm">request_quote</span>
+          </a>
+        </div>
+      </div>
+      <div class="bg-surface-container-lowest rounded border border-border-gray overflow-hidden hover:shadow-md transition-all duration-300 flex flex-col h-full group">
+        <div class="h-36 sm:h-48 bg-surface-container-low flex items-center justify-center overflow-hidden relative">
+          <img src="/images/actual/hybrid_drum.webp" alt="Hybrid drum" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <span class="relative text-white font-bold text-lg text-center drop-shadow-lg z-10">HYBRID<br/>DRUMS</span>
+        </div>
+        <div class="p-4 md:p-6 flex flex-col flex-1">
+          <h3 class="text-lg md:text-xl font-bold text-primary mb-2 md:mb-3">Hybrid Drums</h3>
+          <p class="text-sm md:text-base text-on-surface-variant mb-4 md:mb-6 flex-1 leading-relaxed">Hybrid Drums are a combination of steel structure & PVC sheet. They are economical as compared to steel cable drums. They are also eco friendly as they also avoid using wood. Can be used for smaller size drums.</p>
+            <a href="/contact?product=hybrid-drum" class="text-sm uppercase tracking-wider text-primary hover:text-success-green transition-colors font-semibold inline-flex items-center gap-1 py-2">
+              Request Quote <span class="material-symbols-outlined text-sm">request_quote</span>
+            </a>
+          </div>
+        </div>
+      <div class="bg-surface-container-lowest rounded border border-border-gray overflow-hidden hover:shadow-md transition-all duration-300 flex flex-col h-full group">
+        <div class="h-36 sm:h-48 bg-surface-container-low flex items-center justify-center overflow-hidden relative">
+          <img src="/images/actual/Export_Quality_drum.webp" alt="Export quality drum" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <span class="relative text-white font-bold text-lg text-center drop-shadow-lg z-10">EXPORT<br/>DRUMS</span>
+        </div>
+        <div class="p-4 md:p-6 flex flex-col flex-1">
+          <h3 class="text-lg md:text-xl font-bold text-primary mb-2 md:mb-3">Export Drums</h3>
+          <p class="text-sm md:text-base text-on-surface-variant mb-4 md:mb-6 flex-1 leading-relaxed">Manufactured to international export standards, our drums are engineered for safe ocean freight and global shipping, meeting the most rigorous logistical demands.</p>
+          <a href="/contact?product=export-drum" class="text-sm uppercase tracking-wider text-primary hover:text-success-green transition-colors font-semibold inline-flex items-center gap-1 py-2">
+            Request Quote <span class="material-symbols-outlined text-sm">request_quote</span>
+          </a>
+        </div>
+      </div>
+      <div class="bg-surface-container-lowest rounded border border-border-gray overflow-hidden hover:shadow-md transition-all duration-300 flex flex-col h-full group">
+        <div class="h-36 sm:h-48 bg-surface-container-low flex items-center justify-center overflow-hidden relative">
+          <img src="/images/actual/Drum.webp" alt="Refurbished drum" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <span class="relative text-white font-bold text-lg text-center drop-shadow-lg z-10">REFURBISHED<br/>DRUMS</span>
+        </div>
+        <div class="p-4 md:p-6 flex flex-col flex-1">
+          <h3 class="text-lg md:text-xl font-bold text-primary mb-2 md:mb-3">Refurbished Drums</h3>
+          <p class="text-sm md:text-base text-on-surface-variant mb-4 md:mb-6 flex-1 leading-relaxed">Cost-effective refurbished steel cable drums that undergo thorough inspection and reconditioning, reducing packaging costs while maintaining reliable performance.</p>
+          <a href="/contact?product=refurbished-drum" class="text-sm uppercase tracking-wider text-primary hover:text-success-green transition-colors font-semibold inline-flex items-center gap-1 py-2">
+            Request Quote <span class="material-symbols-outlined text-sm">request_quote</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </RevealSection>
+
+  <!-- About -->
+  <RevealSection client:visible direction="left" className="py-16 md:py-24 px-4 md:px-8 bg-surface-gray" id="profile">
+    <div class="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="relative">
+        <div class="bg-surface-container-high rounded-xl -rotate-2 absolute inset-4"></div>
+        <div class="relative bg-surface-container-low rounded-xl h-80 flex items-center justify-center shadow-sm border border-border-gray overflow-hidden">
+          <img src="/images/actual/SOSP_profile.webp" alt="Shree Om Sai Packaging manufacturing facility" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-black/20"></div>
+        </div>
+        <div class="absolute -bottom-6 left-4 md:left-auto md:-right-6 bg-surface-container-lowest p-6 rounded-lg shadow-sm border border-border-gray">
+          <div class="text-4xl font-extrabold text-primary-container leading-none">2008</div>
+          <div class="text-xs uppercase tracking-wider text-on-surface-variant mt-2 font-semibold">Established</div>
+        </div>
+      </div>
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">Forging a Sustainable Future Since 2008</h2>
+        <div class="w-16 h-1 bg-success-green mb-8"></div>
+        <p class="text-lg text-on-surface-variant mb-6 leading-relaxed">
+          Shree Om Sai Packaging was founded with a clear mission: to disrupt the traditional reliance on wood in industrial packaging. We recognized early on that durability shouldn't come at the cost of our forests.
+        </p>
+        <p class="text-base text-on-surface-variant mb-8 leading-relaxed">
+          By engineering high-quality, reusable steel drums and spools, we provide B2B partners with packaging solutions that are stronger, safer, and inherently sustainable. Our "Save Wood, Go Green" philosophy drives every aspect of our manufacturing process.
+        </p>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+            <div>
+              <span class="font-semibold text-primary text-sm">Eco-Friendly Focus</span>
+              <p class="text-sm text-on-surface-variant">Replacing single-use wood with infinitely recyclable steel.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+            <div>
+              <span class="font-semibold text-primary text-sm">Engineering Excellence</span>
+              <p class="text-sm text-on-surface-variant">Precision manufacturing meeting strict global standards.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </RevealSection>
+
+  <!-- Certifications -->
+  <RevealSection client:visible direction="up" className="py-12 md:py-16 bg-primary text-on-primary">
+    <div class="max-w-[1280px] mx-auto px-4 md:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="md:w-auto shrink-0 text-center md:text-left">
+          <h3 class="text-2xl font-bold text-white mb-1">Certified Quality</h3>
+          <p class="text-xs text-on-primary/80">Verified by leading international standards.</p>
+        </div>
+        <div class="flex flex-wrap md:flex-nowrap justify-center gap-x-3 gap-y-1 items-center opacity-80 hover:opacity-100 transition-opacity">
+          <div class="flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-xl sm:text-2xl shrink-0">verified_user</span>
+            <div class="leading-tight">
+              <div class="text-[10px] sm:text-xs uppercase tracking-wider font-semibold whitespace-nowrap">TUV Rheinland</div>
+              <div class="text-[8px] sm:text-[10px] text-on-primary/70 whitespace-nowrap">Certified</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-xl sm:text-2xl shrink-0">workspace_premium</span>
+            <div class="leading-tight">
+              <div class="text-[10px] sm:text-xs uppercase tracking-wider font-semibold whitespace-nowrap">ISO 9001:2015</div>
+              <div class="text-[8px] sm:text-[10px] text-on-primary/70 whitespace-nowrap">Quality Management</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-xl sm:text-2xl shrink-0">eco</span>
+            <div class="leading-tight">
+              <div class="text-[10px] sm:text-xs uppercase tracking-wider font-semibold whitespace-nowrap">ISO 14001:2015</div>
+              <div class="text-[8px] sm:text-[10px] text-on-primary/70 whitespace-nowrap">Environmental Management</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-xl sm:text-2xl shrink-0">health_and_safety</span>
+            <div class="leading-tight">
+              <div class="text-[10px] sm:text-xs uppercase tracking-wider font-semibold whitespace-nowrap">ISO 45001:2018</div>
+              <div class="text-[8px] sm:text-[10px] text-on-primary/70 whitespace-nowrap">Health & Safety</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-xl sm:text-2xl shrink-0 text-success-green">stars</span>
+            <div class="leading-tight">
+              <div class="text-[10px] sm:text-xs uppercase tracking-wider font-semibold whitespace-nowrap">ZED Gold</div>
+              <div class="text-[8px] sm:text-[10px] text-on-primary/70 whitespace-nowrap">Certified</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </RevealSection>
+
+  <!-- Client Logos -->
+  <RevealSection client:visible direction="up" className="py-16 md:py-24 px-4 md:px-8 max-w-[1280px] mx-auto">
+    <div class="text-center mb-8 md:mb-12">
+      <span class="text-sm uppercase tracking-widest text-primary font-semibold block mb-2">Our Clients</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-primary">Our Esteemed Clients</h2>
+      <p class="text-lg text-on-surface-variant mt-4 max-w-2xl mx-auto leading-relaxed">
+        Trusted by leading companies across the cable and electrical industry for reliable, eco-friendly steel packaging.
+      </p>
+    </div>
+    <LogoCarousel client:load />
+  </RevealSection>
+
+  <!-- Member Organizations -->
+  <RevealSection client:visible direction="up" className="py-16 md:py-24 px-4 md:px-8 bg-surface-gray">
+    <div class="max-w-[1280px] mx-auto text-center">
+      <span class="text-sm uppercase tracking-widest text-primary font-semibold block mb-2">Affiliations</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">We are members of the following esteemed organizations</h2>
+      <p class="text-lg text-on-surface-variant max-w-2xl mx-auto mb-16 leading-relaxed">
+        Our memberships reflect our commitment to industrial excellence, collaboration, and responsible manufacturing.
+      </p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+          <div class="bg-surface-container-lowest rounded-xl border border-border-gray p-4 sm:p-6 flex flex-col items-center justify-center h-36 sm:h-40 hover:shadow-md transition-all duration-300">
+            <div class="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center mb-3 overflow-hidden rounded-full">
+              <img src="/images/actual/cii-logo.png" alt="Confederation of Indian Industry" class="w-full h-full object-contain" />
+            </div>
+            <span class="text-xs sm:text-sm font-semibold text-primary text-center leading-tight">Confederation of<br/>Indian Industry</span>
+          </div>
+          <div class="bg-surface-container-lowest rounded-xl border border-border-gray p-4 sm:p-6 flex flex-col items-center justify-center h-36 sm:h-40 hover:shadow-md transition-all duration-300">
+            <div class="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center mb-3 overflow-hidden rounded-full">
+              <img src="/images/actual/Matsya_Udhyog_sangh_alwar.webp" alt="Matsya Udhyog Sangh Alwar" class="w-full h-full object-contain" />
+            </div>
+            <span class="text-xs sm:text-sm font-semibold text-primary text-center leading-tight">Matsya Udhyog<br/>Sangh Alwar</span>
+          </div>
+          <div class="bg-surface-container-lowest rounded-xl border border-border-gray p-4 sm:p-6 flex flex-col items-center justify-center h-36 sm:h-40 hover:shadow-md transition-all duration-300">
+            <div class="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center mb-3 overflow-hidden rounded-full">
+              <img src="/images/actual/Chamber_Of_Commerce_logo.webp" alt="Chamber of Commerce" class="w-full h-full object-contain" />
+            </div>
+            <span class="text-xs sm:text-sm font-semibold text-primary text-center leading-tight">Chamber of<br/>Commerce</span>
+          </div>
+          <div class="bg-surface-container-lowest rounded-xl border border-border-gray p-4 sm:p-6 flex flex-col items-center justify-center h-36 sm:h-40 hover:shadow-md transition-all duration-300">
+            <div class="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center mb-3 overflow-hidden rounded-full">
+              <img src="/images/actual/lub-logo.png" alt="Laghu Udhyog Bharti" class="w-full h-full object-contain" />
+            </div>
+            <span class="text-xs sm:text-sm font-semibold text-primary text-center leading-tight">Laghu Udhyog<br/>Bharti</span>
+          </div>
+      </div>
+    </div>
+  </RevealSection>
+
+  <!-- Contact & Quote -->
+  <RevealSection client:visible direction="up" className="py-16 md:py-24 px-4 md:px-8 max-w-[1280px] mx-auto" id="contact">
+    <div class="bg-surface-container-lowest rounded-xl shadow-sm border border-border-gray overflow-hidden">
+      <div class="grid grid-cols-1 lg:grid-cols-5">
+        <div class="order-2 lg:order-1 lg:col-span-2 bg-surface-container-low p-6 md:p-10 flex flex-col justify-between">
+          <div>
+            <h2 class="text-2xl font-bold text-primary mb-4">Let's Discuss Your Packaging Needs</h2>
+            <p class="text-base text-on-surface-variant mb-12 leading-relaxed">
+              Provide us with your technical specifications, and our engineering team will provide a tailored, sustainable steel packaging solution.
+            </p>
+            <div class="space-y-6">
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary-container">
+                  <span class="material-symbols-outlined">location_on</span>
+                </div>
+                <div>
+                  <div class="text-xs uppercase tracking-wider text-outline font-semibold mb-1">Headquarters</div>
+                  <div class="text-sm font-semibold text-primary">Plot No. F-596, M.I.A. Extension, Alwar-301030</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary-container">
+                  <span class="material-symbols-outlined">mail</span>
+                </div>
+                <div>
+                  <div class="text-xs uppercase tracking-wider text-outline font-semibold mb-1">Email Us</div>
+                  <a href="mailto:info@sospackaging.com" class="text-sm font-semibold text-primary hover:text-primary-container transition-colors inline-block py-1">info@sospackaging.com</a>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary-container">
+                  <span class="material-symbols-outlined">call</span>
+                </div>
+                <div>
+                  <div class="text-xs uppercase tracking-wider text-outline font-semibold mb-1">Call Us</div>
+                  <a href="tel:01442881561" class="text-sm font-semibold text-primary hover:text-primary-container transition-colors inline-block py-1">0144 - 2881561</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="border-t border-border-gray pt-6 mt-6">
+              <div class="flex items-center gap-2 mb-4">
+                <span class="material-symbols-outlined text-primary-container text-sm">group_work</span>
+                <span class="text-xs uppercase tracking-widest text-outline font-semibold">Sister Company: Cabreel</span>
+              </div>
+              <div class="space-y-4">
+                <div class="flex items-center gap-4">
+                  <div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary-container">
+                    <span class="material-symbols-outlined">location_on</span>
+                  </div>
+                  <div>
+                    <div class="text-xs uppercase tracking-wider text-outline font-semibold mb-1">Address</div>
+                    <div class="text-sm font-semibold text-primary">SP-8(O), M.I.A.,<br/>Alwar, Rajasthan</div>
+                  </div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary-container">
+                    <span class="material-symbols-outlined">call</span>
+                  </div>
+                  <div>
+                    <div class="text-xs uppercase tracking-wider text-outline font-semibold mb-1">Phone</div>
+                    <a href="tel:7976122394" class="text-sm font-semibold text-primary hover:text-primary-container transition-colors inline-block py-1">7976122394</a>
+                  </div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary-container">
+                    <span class="material-symbols-outlined">mail</span>
+                  </div>
+                  <div>
+                    <div class="text-xs uppercase tracking-wider text-outline font-semibold mb-1">Email</div>
+                    <a href="mailto:cabreeldrums@gmail.com" class="text-sm font-semibold text-primary hover:text-primary-container transition-colors break-all inline-block py-1">cabreeldrums@gmail.com</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="order-1 lg:order-2 lg:col-span-3 p-6 md:p-10">
+          <form id="quote-form" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-xs uppercase text-primary font-semibold mb-2 tracking-wider" for="q-company">Company Name <span class="text-outline font-normal normal-case">(optional)</span></label>
+                <input id="q-company" name="company" type="text" class="w-full bg-surface-bright border border-border-gray rounded px-4 py-3 sm:py-4 text-base focus:outline-none focus:ring-2 focus:ring-primary-container focus:border-primary-container transition-all" placeholder="Your company" />
+              </div>
+              <div>
+                <label class="block text-xs uppercase text-primary font-semibold mb-2 tracking-wider" for="q-designation">Designation <span class="text-outline font-normal normal-case">(optional)</span></label>
+                <input id="q-designation" name="designation" type="text" class="w-full bg-surface-bright border border-border-gray rounded px-4 py-3 sm:py-4 text-base focus:outline-none focus:ring-2 focus:ring-primary-container focus:border-primary-container transition-all" placeholder="Your role" />
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-xs uppercase text-primary font-semibold mb-2 tracking-wider" for="q-name">Your Name *</label>
+                <input id="q-name" name="name" type="text" required class="w-full bg-surface-bright border border-border-gray rounded px-4 py-3 sm:py-4 text-base focus:outline-none focus:ring-2 focus:ring-primary-container focus:border-primary-container transition-all" placeholder="Your name" />
+              </div>
+              <div>
+                <label class="block text-xs uppercase text-primary font-semibold mb-2 tracking-wider" for="q-email">Email Address *</label>
+                <input id="q-email" name="email" type="email" required class="w-full bg-surface-bright border border-border-gray rounded px-4 py-3 sm:py-4 text-base focus:outline-none focus:ring-2 focus:ring-primary-container focus:border-primary-container transition-all" placeholder="your@email.com" />
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-xs uppercase text-primary font-semibold mb-2 tracking-wider" for="q-phone">Phone <span class="text-outline font-normal normal-case">(optional)</span></label>
+                <input id="q-phone" name="phone" type="tel" class="w-full bg-surface-bright border border-border-gray rounded px-4 py-3 sm:py-4 text-base focus:outline-none focus:ring-2 focus:ring-primary-container focus:border-primary-container transition-all" placeholder="Your phone" />
+              </div>
+              <div>
+                <label class="block text-xs uppercase text-primary font-semibold mb-2 tracking-wider" for="q-contact-time">Preferred Contact Time *</label>
+                <select id="q-contact-time" name="contact-time" class="w-full bg-surface-bright border border-border-gray rounded px-4 py-3 sm:py-4 text-base focus:outline-none focus:ring-2 focus:ring-primary-container focus:border-primary-container transition-all">
+                  <option value="">Select preferred time</option>
+                  <option value="morning">Morning (9:00 AM - 12:00 PM)</option>
+                  <option value="afternoon">Afternoon (12:00 PM - 3:00 PM)</option>
+                  <option value="evening">Evening (3:00 PM - 6:00 PM)</option>
+                  <option value="anytime">Anytime</option>
+                </select>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-xs uppercase text-primary font-semibold mb-2 tracking-wider" for="q-hear-about">How did you hear about us? <span class="text-outline font-normal normal-case">(optional)</span></label>
+                <select id="q-hear-about" name="hear-about" class="w-full bg-surface-bright border border-border-gray rounded px-4 py-3 sm:py-4 text-base focus:outline-none focus:ring-2 focus:ring-primary-container focus:border-primary-container transition-all">
+                  <option value="">Select an option</option>
+                  <option value="google">Google Search</option>
+                  <option value="linkedin">LinkedIn</option>
+                  <option value="trade-show">Trade Show / Exhibition</option>
+                  <option value="referral">Referral</option>
+                  <option value="social-media">Social Media</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs uppercase text-primary font-semibold mb-2 tracking-wider" for="q-quantity">Estimated Quantity <span class="text-outline font-normal normal-case">(optional)</span></label>
+                <select id="q-quantity" name="quantity" class="w-full bg-surface-bright border border-border-gray rounded px-4 py-3 sm:py-4 text-base focus:outline-none focus:ring-2 focus:ring-primary-container focus:border-primary-container transition-all">
+                  <option value="">Select approximate quantity</option>
+                  <option value="trial">Trial (1-5 drums)</option>
+                  <option value="small">Small Batch (5-20 drums)</option>
+                  <option value="medium">Medium Order (20-100 drums)</option>
+                  <option value="large">Large Order (100+ drums)</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs uppercase text-primary font-semibold mb-3 tracking-wider">Preferred Unit Type</label>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <label class="flex items-center gap-3 p-3 rounded-lg border border-border-gray bg-surface-bright hover:bg-surface-container-low transition-colors cursor-pointer has-[:checked]:border-primary-container has-[:checked]:bg-primary-container/5">
+                  <input type="checkbox" name="unit-type" value="corrugated-steel-cable-drum" class="accent-primary-container w-5 h-5 shrink-0" />
+                  <span class="text-sm font-medium text-primary">Corrugated Steel Cable Drum</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 rounded-lg border border-border-gray bg-surface-bright hover:bg-surface-container-low transition-colors cursor-pointer has-[:checked]:border-primary-container has-[:checked]:bg-primary-container/5">
+                  <input type="checkbox" name="unit-type" value="process-drum" class="accent-primary-container w-4 h-4" />
+                  <span class="text-sm font-medium text-primary">Process Drum</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 rounded-lg border border-border-gray bg-surface-bright hover:bg-surface-container-low transition-colors cursor-pointer has-[:checked]:border-primary-container has-[:checked]:bg-primary-container/5">
+                  <input type="checkbox" name="unit-type" value="ms-tie-rod" class="accent-primary-container w-4 h-4" />
+                  <span class="text-sm font-medium text-primary">M.S Tie Rod</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 rounded-lg border border-border-gray bg-surface-bright hover:bg-surface-container-low transition-colors cursor-pointer has-[:checked]:border-primary-container has-[:checked]:bg-primary-container/5">
+                  <input type="checkbox" name="unit-type" value="hybrid-drum" class="accent-primary-container w-4 h-4" />
+                  <span class="text-sm font-medium text-primary">Hybrid Drum</span>
+                </label>
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs uppercase text-primary font-semibold mb-2 tracking-wider" for="q-message">Technical Specifications / Message *</label>
+              <textarea id="q-message" name="message" rows="4" required class="w-full bg-surface-bright border border-border-gray rounded px-4 py-3 sm:py-4 text-base focus:outline-none focus:ring-2 focus:ring-primary-container focus:border-primary-container transition-all" placeholder="Please provide details regarding dimensions, load capacity, or specific requirements..."></textarea>
+            </div>
+            <div>
+              <label class="block text-xs uppercase text-primary font-semibold mb-2 tracking-wider" for="q-attachment">Attach Reference Drawing / Spec Sheet <span class="text-outline font-normal normal-case">(optional)</span></label>
+                <input id="q-attachment" name="attachment" type="file" accept=".pdf,.dxf,.dwg,.jpg,.png" class="w-full text-sm text-on-surface-variant file:mr-4 file:py-3 file:px-5 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-primary-container file:text-white hover:file:bg-primary file:cursor-pointer transition-all cursor-pointer" />
+              <p class="text-xs text-outline mt-1">Accepted: PDF, DXF, DWG, JPG, PNG</p>
+            </div>
+            <label class="flex items-start gap-3 cursor-pointer">
+               <input type="checkbox" name="consent" required class="accent-primary-container w-5 h-5 mt-0.5 shrink-0" />
+              <span class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">I consent to Shree Om Sai Packaging contacting me about my inquiry and confirm I have read the <a href="/privacy" class="text-primary hover:text-primary-container underline">Privacy Policy</a>. *</span>
+            </label>
+            <button type="submit" class="bg-success-green text-white font-semibold uppercase tracking-wider px-8 py-4 rounded hover:bg-primary transition-all duration-200 w-full md:w-auto text-sm">
+              Request a Quote
+            </button>
+            <p id="quote-form-status" class="text-sm text-center hidden"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </RevealSection>
+
+</Layout>
+
+<script>
+  const Q_SCRIPT_ID = import.meta.env.PUBLIC_GAS_SCRIPT_ID;
+  const Q_GAS_URL = Q_SCRIPT_ID ? `https://script.google.com/macros/s/${Q_SCRIPT_ID}/exec` : null;
+  const Q_MIN_INTERVAL = 5000;
+
+  function qSanitize(str) {
+    if (typeof str !== "string") return "";
+    return str.replace(/<[^>]*>/g, "").trim();
+  }
+
+  function qIsValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  let qLastSubmit = 0;
+
+  document.getElementById("quote-form")?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const now = Date.now();
+    if (now - qLastSubmit < Q_MIN_INTERVAL) return;
+
+    const form = e.target;
+    const status = document.getElementById("quote-form-status");
+    const btn = form.querySelector('button[type="submit"]');
+
+    if (!Q_GAS_URL) {
+      status.textContent = "Form is not yet configured. Please email us directly at info@sospackaging.com";
+      status.className = "text-sm text-red-600 text-center";
+      status.classList.remove("hidden");
+      return;
+    }
+
+    const raw = new FormData(form);
+    const email = qSanitize(raw.get("email") || "");
+    if (!qIsValidEmail(email)) {
+      status.textContent = "Please enter a valid email address.";
+      status.className = "text-sm text-red-600 text-center";
+      status.classList.remove("hidden");
+      return;
+    }
+
+    if (!qSanitize(raw.get("name") || "")) {
+      status.textContent = "Please enter your name.";
+      status.className = "text-sm text-red-600 text-center";
+      status.classList.remove("hidden");
+      return;
+    }
+
+    if (!qSanitize(raw.get("message") || "")) {
+      status.textContent = "Please enter a message.";
+      status.className = "text-sm text-red-600 text-center";
+      status.classList.remove("hidden");
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = "Sending...";
+    status.classList.add("hidden");
+    qLastSubmit = now;
+
+    for (const [key] of raw.entries()) {
+      if (key === "consent" || key === "attachment") continue;
+      const val = raw.get(key);
+      if (typeof val === "string") raw.set(key, qSanitize(val));
+    }
+
+    try {
+      const res = await fetch(Q_GAS_URL, {
+        method: "POST",
+        body: raw,
+      });
+      if (res.ok) {
+        status.textContent = "Thanks for submitting! We'll get back to you shortly.";
+        status.className = "text-sm text-green-600 text-center";
+        form.reset();
+      } else {
+        throw new Error("Failed");
+      }
+    } catch {
+      status.textContent = "Something went wrong. Please email us directly at info@sospackaging.com";
+      status.className = "text-sm text-red-600 text-center";
+    }
+    status.classList.remove("hidden");
+    btn.disabled = false;
+    btn.textContent = "Request a Quote";
+  });
+
+  const iParams = new URLSearchParams(window.location.search);
+  const iProduct = iParams.get("product");
+  if (iProduct) {
+    const iCheckbox = document.querySelector(`#quote-form input[name="unit-type"][value="${iProduct}"]`);
+    if (iCheckbox) iCheckbox.checked = true;
+  }
+</script>

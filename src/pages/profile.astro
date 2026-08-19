@@ -1,0 +1,244 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { RevealSection } from "../components/RevealSection";
+import { AnimatedCounter } from "../components/AnimatedCounter";
+
+---
+
+<Layout title="About Us" description="Shree Om Sai Packaging - Established 2008. ISO 9001 & ZED Gold certified. 450-500 MT monthly capacity. 3 units in Alwar and 1 unit in Reengus." canonical="https://www.sospackaging.com/profile">
+
+  <!-- Hero Banner -->
+  <section class="relative w-full h-[55vh] min-h-[350px] flex items-center justify-center overflow-hidden bg-primary">
+    <div class="absolute inset-0 bg-cover" style="background-image: url('/images/actual/Our_Team_2.webp'); background-position: center 25%;"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-neutral-dark/80 to-primary/80"></div>
+    <div class="relative z-10 text-center px-4 md:px-8 max-w-[1280px] mx-auto flex flex-col items-center">
+      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs uppercase tracking-widest font-semibold mb-6 shadow-lg backdrop-blur-sm">
+        <span class="material-symbols-outlined text-sm">eco</span>
+        Est. 2008
+      </span>
+      <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 drop-shadow-lg">About Us</h1>
+      <p class="text-lg md:text-xl text-surface-gray max-w-2xl drop-shadow-md leading-relaxed">
+        Disrupting reliance on wood through sustainable, heavy-duty industrial packaging solutions engineered for a greener tomorrow.
+      </p>
+    </div>
+  </section>
+
+  <!-- Vision & Mission -->
+  <section class="py-24 px-4 md:px-8 bg-surface-gray">
+    <div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div class="bg-surface-container-lowest rounded-xl p-10 md:p-12 border border-border-gray shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden group">
+        <div class="absolute -right-16 -top-16 w-40 h-40 rounded-full bg-primary-container/5 group-hover:scale-150 transition-transform duration-500"></div>
+        <div class="relative z-10">
+          <div class="w-12 h-12 rounded-lg bg-primary-container text-white flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-2xl">visibility</span>
+          </div>
+          <h2 class="text-2xl md:text-3xl font-bold text-primary mb-6">Our Vision</h2>
+          <div class="w-12 h-1 bg-success-green mb-6"></div>
+          <p class="text-lg text-on-surface-variant leading-relaxed">
+            To revolutionize the cable drum industry by replacing traditional wooden drums with durable, eco-friendly steel cable drums, contributing to a more sustainable and environmentally conscious future.
+          </p>
+        </div>
+      </div>
+      <div class="bg-surface-container-lowest rounded-xl p-10 md:p-12 border border-border-gray shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden group">
+        <div class="absolute -left-16 -bottom-16 w-40 h-40 rounded-full bg-success-green/5 group-hover:scale-150 transition-transform duration-500"></div>
+        <div class="relative z-10">
+          <div class="w-12 h-12 rounded-lg bg-success-green text-white flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-2xl">track_changes</span>
+          </div>
+          <h2 class="text-2xl md:text-3xl font-bold text-primary mb-6">Our Mission</h2>
+          <div class="w-12 h-1 bg-success-green mb-6"></div>
+          <p class="text-lg text-on-surface-variant leading-relaxed">
+            To design and manufacture high-quality steel cable drums that deliver unmatched durability, safety, and environmental sustainability — providing cost-effective packaging solutions to our clients. By integrating innovation and eco-conscious practices, we aim to provide reliable solutions that reduce deforestation and environmental impact while meeting the evolving needs of our clients and industries worldwide.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-24 px-4 md:px-8 max-w-[1280px] mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+      <div class="md:col-span-5 relative">
+        <div class="absolute -inset-4 bg-surface-container-high rounded-xl -rotate-3 z-0"></div>
+        <div class="relative z-10 bg-surface-container-low rounded-xl h-80 flex items-center justify-center shadow-md border border-border-gray overflow-hidden">
+          <img src="/images/actual/hero_6.webp" alt="Shree Om Sai Packaging facility" class="absolute inset-0 w-full h-full object-cover" />
+        </div>
+      </div>
+      <div class="md:col-span-7 md:pl-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-neutral-dark mb-6">Pioneering Sustainable Strength</h2>
+        <div class="w-16 h-1 bg-success-green mb-8"></div>
+        <p class="text-lg text-on-surface-variant mb-6 leading-relaxed">
+          Established in 2008, Shree Om Sai Packaging was founded with a singular, uncompromising vision: to <strong class="text-primary-container font-semibold">Save Wood, Go Green</strong>. We recognized early on that the industrial sector's heavy reliance on wood for packaging was ecologically unsustainable and logistically inefficient.
+        </p>
+        <p class="text-lg text-on-surface-variant mb-6 leading-relaxed">
+          Shree Om Sai Packaging was established in November 2008 with the aim of providing eco-friendly steel cable drums at optimum weight and rates to the cable industry for their packaging needs. We are a steel cable drums manufacturing company based in Alwar with 3 units in Alwar and 1 unit in Reengus.
+        </p>
+        <p class="text-lg text-on-surface-variant mb-6 leading-relaxed">
+          Our manufacturing capacities are 450-500 metric tonnes, approximately 1500 drums per month with a daily production capacity of 45-50 drums. We have the credit of replacing wooden drums of various sizes by our steel cable drums with optimized weights.
+        </p>
+        <p class="text-lg text-on-surface-variant mb-6 leading-relaxed">
+          We are ISO 9001:2015 certified from TUV Rheinland and are focused on being a one-point solution junction to all the packaging needs of the cable industry. Our USP is on-time delivery due to which we are the first choice for order booking by our esteemed customers. We also refurbish steel cable drums.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-on-secondary-container">recycling</span>
+            </div>
+            <div>
+              <h4 class="text-sm uppercase tracking-wider text-neutral-dark font-semibold mb-1">100% Recyclable</h4>
+              <p class="text-sm text-on-surface-variant">Fully circular material lifecycle reducing industrial waste.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-on-secondary-container">precision_manufacturing</span>
+            </div>
+            <div>
+              <h4 class="text-sm uppercase tracking-wider text-neutral-dark font-semibold mb-1">Engineered Precision</h4>
+              <p class="text-sm text-on-surface-variant">Manufactured to exact tolerances for reliable performance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Team -->
+  <section class="py-16 md:py-24 px-4 md:px-8 max-w-[1280px] mx-auto bg-surface-gray">
+    <div class="text-center mb-12">
+      <span class="text-sm uppercase tracking-widest text-primary font-semibold block mb-2">The People</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-primary">Our Team</h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="group bg-surface-container-lowest rounded-xl overflow-hidden border border-border-gray shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+        <div class="aspect-[4/3] bg-surface-container-low relative overflow-hidden">
+          <img src="/images/actual/Our_Team.webp" alt="Our team" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        </div>
+      </div>
+      <div class="group bg-surface-container-lowest rounded-xl overflow-hidden border border-border-gray shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+        <div class="aspect-[4/3] bg-surface-container-low relative overflow-hidden">
+          <img src="/images/actual/Our_Team_2.webp" alt="Our team 2" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        </div>
+      </div>
+      <div class="group bg-surface-container-lowest rounded-xl overflow-hidden border border-border-gray shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+        <div class="aspect-[4/3] bg-surface-container-low relative overflow-hidden">
+          <img src="/images/actual/Our_Team_3.webp" alt="Our team 3" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <RevealSection client:visible direction="up" className="py-24 bg-surface-gray">
+    <div class="px-4 md:px-8 max-w-[1280px] mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-2xl md:text-3xl font-bold text-neutral-dark mb-4">Operational Capacity</h2>
+        <p class="text-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed">Scale and certification that guarantee consistent supply and uncompromising quality for enterprise operations.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="md:col-span-2 bg-surface-container-lowest rounded-xl p-8 border border-border-gray shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between overflow-hidden relative group">
+          <div class="absolute right-0 top-0 w-64 h-64 bg-surface-container-low rounded-bl-full opacity-50 group-hover:scale-110 transition-transform duration-500 z-0"></div>
+          <div class="relative z-10">
+            <div class="w-12 h-12 rounded-lg bg-primary-container text-white flex items-center justify-center mb-6 shadow-sm">
+              <span class="material-symbols-outlined">factory</span>
+            </div>
+            <h3 class="text-xs uppercase tracking-widest text-on-surface-variant font-semibold mb-2">Monthly Production Capacity</h3>
+            <div class="flex flex-col gap-4">
+              <div class="text-5xl font-extrabold text-primary-container leading-none flex items-baseline gap-2">
+                450-500
+                <span class="text-2xl font-bold text-outline">MT</span>
+              </div>
+              <div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+                <div class="bg-primary h-full w-[90%] rounded-full"></div>
+              </div>
+              <div class="flex justify-between text-xs text-on-surface-variant">
+                <span>~1500 Drums / Month</span>
+                <span>45-50 Drums / Day</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-surface-container-lowest rounded-xl p-8 border border-border-gray shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-center text-center">
+          <div class="mx-auto w-12 h-12 rounded-lg bg-surface-container-highest text-primary-container flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined">inventory_2</span>
+          </div>
+          <div class="text-3xl font-bold text-neutral-dark mb-1">45-50</div>
+          <h3 class="text-xs uppercase tracking-widest text-on-surface-variant font-semibold">Drums Per Day</h3>
+        </div>
+        <div class="bg-surface-container-lowest rounded-xl p-8 border border-border-gray shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-center text-center">
+          <div class="text-4xl font-extrabold text-neutral-dark mb-1 tracking-tight">4</div>
+          <h3 class="text-xs uppercase tracking-widest text-on-surface-variant font-semibold">Units — 3 In Alwar, 1 In Reengus</h3>
+        </div>
+        <div class="md:col-span-2 bg-surface-container-lowest rounded-xl p-8 border border-border-gray shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+          <div class="relative z-10">
+            <h3 class="text-xs uppercase tracking-widest text-on-surface-variant font-semibold mb-4">Certifications</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+              <div class="flex items-center gap-4 bg-surface-container-low rounded-lg p-4 border border-border-gray/50 md:col-span-2">
+                <span class="material-symbols-outlined text-success-green text-4xl shrink-0">stars</span>
+                <div>
+                  <div class="text-sm font-bold text-primary">ZED Gold Certification</div>
+                  <p class="text-xs text-on-surface-variant">First ZED Gold Certified Steel Cable Drum Unit in India — recognized for excellence in quality, environment, safety, and energy management under the ZED (Zero Effect Zero Defect) scheme.</p>
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div class="flex items-center gap-4 bg-surface-container-low rounded-lg p-4 border border-border-gray/50">
+                <span class="material-symbols-outlined text-primary-container text-4xl shrink-0">workspace_premium</span>
+                <div>
+                  <div class="text-sm font-bold text-primary">ISO 9001:2015</div>
+                  <p class="text-xs text-on-surface-variant">Quality Management System — certified by TUV Rheinland for stringent quality standards in manufacturing.</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4 bg-surface-container-low rounded-lg p-4 border border-border-gray/50">
+                <span class="material-symbols-outlined text-primary-container text-4xl shrink-0">eco</span>
+                <div>
+                  <div class="text-sm font-bold text-primary">ISO 14001:2015</div>
+                  <p class="text-xs text-on-surface-variant">Environmental Management System — framework to minimize environmental footprint, manage resources, and ensure regulatory compliance.</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4 bg-surface-container-low rounded-lg p-4 border border-border-gray/50">
+                <span class="material-symbols-outlined text-primary-container text-4xl shrink-0">health_and_safety</span>
+                <div>
+                  <div class="text-sm font-bold text-primary">ISO 45001:2018</div>
+                  <p class="text-xs text-on-surface-variant">Occupational Health & Safety Management System — provides safe and healthy workplaces by preventing work-related injury and ill-health.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </RevealSection>
+
+  <!-- Future Plan -->
+  <RevealSection client:visible direction="up" className="py-24 px-4 md:px-8 max-w-[1280px] mx-auto">
+    <div class="bg-primary rounded-2xl p-10 md:p-16 text-white relative overflow-hidden shadow-lg border border-primary-container">
+      <div class="absolute -right-20 -top-20 w-96 h-96 rounded-full bg-secondary opacity-20 blur-3xl"></div>
+      <div class="absolute -left-20 -bottom-20 w-96 h-96 rounded-full bg-success-green opacity-10 blur-3xl"></div>
+      <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded border border-white/20 text-white text-xs uppercase tracking-wider font-semibold mb-6">
+            <span class="material-symbols-outlined text-sm">rocket_launch</span>
+            Vision
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">The Future Plan</h2>
+          <p class="text-lg text-on-primary/80 mb-8 leading-relaxed">
+            Produce and supply steel cable drums on a returnable basis so that the drum can be used more than once, benefitting the buyer in packaging cost. Also refurbish and supply steel cable drums, reducing the packaging cost for cable manufacturers. Switch over to latest and ultra modern techniques of production to produce and supply products of high standards and quality at competitive prices.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-white/5 backdrop-blur-sm p-6 rounded-lg border border-white/10 hover:bg-white/10 transition-colors">
+            <span class="material-symbols-outlined text-white mb-4 text-3xl">trending_up</span>
+            <div class="text-xl font-bold mb-2">Returnable</div>
+            <div class="text-sm text-on-primary/70">Multi-use drum program</div>
+          </div>
+          <div class="bg-white/5 backdrop-blur-sm p-6 rounded-lg border border-white/10 hover:bg-white/10 transition-colors mt-8">
+            <span class="material-symbols-outlined text-white mb-4 text-3xl">precision_manufacturing</span>
+            <div class="text-xl font-bold mb-2">Modern Tech</div>
+            <div class="text-sm text-on-primary/70">Latest production techniques</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </RevealSection>
+</Layout>

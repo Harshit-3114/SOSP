@@ -1,0 +1,334 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const awards = [
+  { src: "/images/actual/award.webp", alt: "Award recognition" },
+  { src: "/images/actual/msme_award.webp", alt: "MSME Award" },
+  { src: "/images/actual/msme_award2.webp", alt: "MSME Award 2" },
+  { src: "/images/actual/pnb_award.webp", alt: "PNB Award" },
+  { src: "/images/actual/safety_award.webp", alt: "Safety Award" },
+  { src: "/images/actual/safety_award2.webp", alt: "Safety Award 2" },
+  { src: "/images/actual/tally_award.webp", alt: "Tally Award" },
+  { src: "/images/actual/Employee_incentive_Award.webp", alt: "Employee incentive award" },
+  { src: "/images/actual/Employee_Incentive_Award_2.webp", alt: "Employee incentive award 2" },
+  { src: "/images/actual/Award_safety_news.webp", alt: "Award in safety news" },
+];
+
+const initiatives = [
+  {
+    title: "Felicitations",
+    icon: "emoji_events",
+    description: "Recognitions and honors received by our team for dedication and excellence in manufacturing.",
+    items: [
+      { src: "/images/actual/felicitation.webp", alt: "Felicitation" },
+      { src: "/images/actual/felicitation_2.webp", alt: "Felicitation 2" },
+      { src: "/images/actual/felicitation_3.webp", alt: "Felicitation 3" },
+    ],
+  },
+  {
+    title: "Exhibitions",
+    icon: "storefront",
+    description: "We continuously participate in industry exhibitions and trade fairs across the country, including ELECRAMA (the world's largest electrical and industrial electronics exhibition), along with an international visit to China to explore global manufacturing advancements and market opportunities.",
+    items: [
+      { src: "/images/actual/Exhitbition.webp", alt: "Exhibition" },
+      { src: "/images/actual/Exhitbition_2.webp", alt: "Exhibition 2" },
+      { src: "/images/actual/Exhitbition_3.webp", alt: "Exhibition 3" },
+      { src: "/images/actual/Exhibition_4.webp", alt: "Exhibition 4" },
+      { src: "/images/actual/Exhibition_5.webp", alt: "Exhibition 5" },
+      { src: "/images/actual/Exhibition_6.webp", alt: "Exhibition 6" },
+      { src: "/images/actual/Exhibition_7.webp", alt: "Exhibition 7" },
+      { src: "/images/actual/Exhibition_8.webp", alt: "Exhibition 8" },
+      { src: "/images/actual/Exhibition_9.webp", alt: "Exhibition 9" },
+      { src: "/images/actual/Exhibition_10.webp", alt: "Exhibition 10" },
+      { src: "/images/actual/Exhibition_11.webp", alt: "Exhibition 11" },
+      { src: "/images/actual/Exhibition_12.webp", alt: "Exhibition 12" },
+      { src: "/images/actual/china_1.webp", alt: "China visit 1" },
+      { src: "/images/actual/china_2.webp", alt: "China visit 2" },
+      { src: "/images/actual/china_3.webp", alt: "China visit 3" },
+      { src: "/images/actual/china_4.webp", alt: "China visit 4" },
+      { src: "/images/actual/china_5.webp", alt: "China visit 5" },
+      { src: "/images/actual/china_6.webp", alt: "China visit 6" },
+      { src: "/images/actual/china_7.webp", alt: "China visit 7" },
+      { src: "/images/actual/china_8.webp", alt: "China visit 8" },
+    ],
+  },
+  {
+    title: "Health & Safety",
+    icon: "health_and_safety",
+    description: "We are affiliated with ESI (Employees' State Insurance), providing our workers with comprehensive social security coverage including medical care, sickness benefit, maternity benefit, and disablement benefit. Regular worker health check-ups are conducted every 2 months, alongside ESI-mandated medical examinations, to ensure the well-being of our team. We also conduct safety training programs, CPR awareness sessions, and health camps across our facilities.",
+    items: [
+      { src: "/images/actual/Factory_Health_adoption_Programme.webp", alt: "Factory health programme" },
+      { src: "/images/actual/Factory_Health_adoption_programme_2.webp", alt: "Factory health programme 2" },
+      { src: "/images/actual/Factory_Health_adoption_Programme_3.webp", alt: "Factory health programme 3" },
+      { src: "/images/actual/Factory_Health_adoption_Programme_4.webp", alt: "Factory health programme 4" },
+      { src: "/images/actual/Medical_camp.webp", alt: "Medical camp" },
+      { src: "/images/actual/Cpr_training.mp4", alt: "CPR training", video: true },
+      { src: "/images/actual/cpr_training_2.mp4", alt: "CPR training 2", video: true },
+    ],
+  },
+  {
+    title: "Industrial Visits",
+    icon: "factory",
+    description: "Industrial visits organized for college students to observe our manufacturing processes and quality standards firsthand.",
+    items: [
+      { src: "/images/actual/Industrial_visit.webp", alt: "Industrial visit" },
+      { src: "/images/actual/Industrial_visit_2.webp", alt: "Industrial visit 2" },
+      { src: "/images/actual/Industrial_visit_3.webp", alt: "Industrial visit 3" },
+    ],
+  },
+  {
+    title: "Tree Plantation",
+    icon: "forest",
+    description: "On the birthday of our managing partner Mr. Amit Shyamsukha, 11 trees were planted in the well-developed and maintained garden at Cabreel Drums, reflecting our commitment to environmental stewardship and a greener future.",
+    items: [
+      { src: "/images/actual/birthday_tree_plantation.webp", alt: "Tree plantation" },
+      { src: "/images/actual/BIrthday_tree_plantation_2.webp", alt: "Tree plantation 2" },
+      { src: "/images/actual/BIrthday_tree_plantation_3.webp", alt: "Tree plantation 3" },
+      { src: "/images/actual/BIrthday_tree_plantation_4.mp4", alt: "Tree plantation 4", video: true },
+    ],
+  },
+  {
+    title: "Rainwater Harvesting",
+    icon: "water_drop",
+    description: "Sustainable water management through rainwater harvesting systems installed across our manufacturing units.",
+    items: [
+      { src: "/images/actual/rainwater_harvesting.mp4", alt: "Rainwater harvesting", video: true },
+      { src: "/images/actual/rainwater_harvesting_2.mp4", alt: "Rainwater harvesting 2", video: true },
+      { src: "/images/actual/rainwater_harvesting_3.mp4", alt: "Rainwater harvesting 3", video: true },
+      { src: "/images/actual/rainwater_harvesting_4.mp4", alt: "Rainwater harvesting 4", video: true },
+    ],
+  },
+  {
+    title: "Solar Energy",
+    icon: "solar_power",
+    description: "Harnessing solar power to reduce our carbon footprint and move toward energy-independent operations.",
+    items: [
+      { src: "/images/actual/Solar.webp", alt: "Solar installation" },
+      { src: "/images/actual/Solar_2.webp", alt: "Solar installation 2" },
+      { src: "/images/actual/Solar_3.webp", alt: "Solar installation 3" },
+    ],
+  },
+  {
+    title: "Garden",
+    icon: "yard",
+    description: "Developed and maintained green spaces at our facilities promoting biodiversity and a healthier work environment.",
+    items: [
+      { src: "/images/actual/Garden.mp4", alt: "Garden", video: true },
+      { src: "/images/actual/Garden_2.mp4", alt: "Garden 2", video: true },
+      { src: "/images/actual/Garden_3.webp", alt: "Garden 3" },
+      { src: "/images/actual/Garden_4.webp", alt: "Garden 4" },
+      { src: "/images/actual/Garden_5.webp", alt: "Garden 5" },
+      { src: "/images/actual/Garden_6.webp", alt: "Garden 6" },
+    ],
+  },
+  {
+    title: "Birthday Celebrations",
+    icon: "celebration",
+    description: "Celebrating our team members' birthdays with warmth and camaraderie, building a family-like work culture.",
+    items: [
+      { src: "/images/actual/Birthday_Celebration.webp", alt: "Birthday celebration" },
+      { src: "/images/actual/Birthday_Celebration_2.webp", alt: "Birthday celebration 2" },
+      { src: "/images/actual/birthday_celebration_3.webp", alt: "Birthday celebration 3" },
+    ],
+  },
+  {
+    title: "Marathon",
+    icon: "directions_run",
+    description: "Participating in marathons to promote health, fitness, and team spirit among our employees.",
+    items: [
+      { src: "/images/actual/Marathon.mp4", alt: "Marathon", video: true },
+      { src: "/images/actual/Marathon_2.webp", alt: "Marathon 2" },
+    ],
+  },
+  {
+    title: "Independence Day",
+    icon: "flag",
+    description: "Celebrating the spirit of freedom and national pride with our entire team at the facility.",
+    items: [
+      { src: "/images/actual/Independance_day_celebration.webp", alt: "Independence Day celebration" },
+    ],
+  },
+];
+---
+
+<Layout title="Gallery" description="Shree Om Sai Packaging — ISO 9001 & ZED Gold certified steel cable drum manufacturer. Explore our awards, initiatives, ELECRAMA exhibitions, China visit, CSR tree plantation, health & safety programs, and facility tours." canonical="https://www.sospackaging.com/gallery">
+
+  <!-- Hero -->
+  <section class="relative w-full h-[55vh] min-h-[350px] flex items-center justify-center overflow-hidden bg-primary">
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/images/actual/hero_1.webp');"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-neutral-dark/80 to-primary/80"></div>
+    <div class="relative z-10 text-center px-4 md:px-8 max-w-[1280px] mx-auto">
+      <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 drop-shadow-lg">Gallery</h1>
+      <p class="text-lg md:text-xl text-surface-gray max-w-2xl mx-auto drop-shadow-md leading-relaxed">
+        Our achievements, initiatives, and the moments that define us
+      </p>
+    </div>
+  </section>
+
+  <!-- Awards & Recognitions -->
+  <section class="py-16 md:py-24 px-4 md:px-8 max-w-[1280px] mx-auto">
+    <div class="text-center mb-12">
+      <span class="text-sm uppercase tracking-widest text-primary font-semibold block mb-2">Achievements</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-primary">Awards & Recognitions</h2>
+      <p class="text-lg text-on-surface-variant mt-4 max-w-2xl mx-auto leading-relaxed">
+        Honored with ISO 9001:2015, ISO 14001:2015 & ISO 45001:2018 certifications from TUV Rheinland, the prestigious ZED Gold Certification, MSME recognition, the State Safety Award for 2022, 2023 & 2024 by Factories & Boilers Department Rajasthan, and other industry awards for safety, quality, and manufacturing excellence.
+      </p>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+      {awards.map((award) => (
+        <div class="group bg-surface-container-lowest rounded-xl overflow-hidden border border-border-gray shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+          <div class="aspect-square bg-surface-container-low relative overflow-hidden">
+            <img
+              src={award.src}
+              alt={award.alt}
+              loading="lazy"
+              class="absolute inset-0 w-full h-full object-contain p-3 group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Our Initiatives -->
+  <section class="py-16 md:py-24 px-4 md:px-8 bg-surface-gray">
+    <div class="max-w-[1280px] mx-auto">
+      <div class="text-center mb-12">
+        <span class="text-sm uppercase tracking-widest text-primary font-semibold block mb-2">Making a Difference</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-primary">Our Initiatives</h2>
+      </div>
+
+      {initiatives.map((init) => (
+        <div class="mb-16 last:mb-0">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="material-symbols-outlined text-primary-container text-3xl">{init.icon}</span>
+            <h3 class="text-2xl font-bold text-primary">{init.title}</h3>
+          </div>
+          {init.description && <p class="text-base text-on-surface-variant mb-6 ml-1 leading-relaxed">{init.description}</p>}
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {init.items.map((item) => (
+              <div class="group bg-surface-container-lowest rounded-xl overflow-hidden border border-border-gray shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                {item.video ? (
+                  <div class="aspect-[4/3] bg-surface-container-low relative overflow-hidden">
+                    <video
+                      class="absolute inset-0 w-full h-full object-cover"
+                      controls
+                      preload="auto"
+                      playsinline
+                      muted
+                    >
+                      <source src={item.src} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                ) : (
+                  <div class="aspect-[4/3] bg-surface-container-low relative overflow-hidden">
+                    <img src={item.src} alt={item.alt} loading="lazy" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+</Layout>
+
+<style is:global>
+  .lightbox-open { overflow: hidden; }
+</style>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const overlay = document.createElement("div");
+    overlay.className = "fixed inset-0 z-[200] bg-black/90 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300";
+    overlay.innerHTML = `
+      <button class="absolute top-4 right-4 w-12 h-12 flex items-center justify-center text-white/80 hover:text-white z-10" id="lb-close" aria-label="Close lightbox">
+        <span class="material-symbols-outlined text-3xl">close</span>
+      </button>
+      <button class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center text-white/80 hover:text-white z-10" id="lb-prev" aria-label="Previous image">
+        <span class="material-symbols-outlined text-4xl">chevron_left</span>
+      </button>
+      <button class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center text-white/80 hover:text-white z-10" id="lb-next" aria-label="Next image">
+        <span class="material-symbols-outlined text-4xl">chevron_right</span>
+      </button>
+      <div class="flex items-center justify-center w-full h-full p-4 md:p-12">
+        <img id="lb-img" class="max-w-full max-h-full object-contain select-none" alt="" />
+      </div>
+      <div id="lb-counter" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/70 text-sm font-mono"></div>
+    `;
+    document.body.appendChild(overlay);
+
+    const imgEl = overlay.querySelector("#lb-img");
+    const closeBtn = overlay.querySelector("#lb-close");
+    const prevBtn = overlay.querySelector("#lb-prev");
+    const nextBtn = overlay.querySelector("#lb-next");
+    const counter = overlay.querySelector("#lb-counter");
+
+    let currentImages = [];
+    let currentIndex = 0;
+
+    function openLightbox(images, index) {
+      currentImages = images;
+      currentIndex = index;
+      showImage();
+      overlay.classList.remove("opacity-0", "pointer-events-none");
+      document.body.classList.add("lightbox-open");
+    }
+
+    function closeLightbox() {
+      overlay.classList.add("opacity-0", "pointer-events-none");
+      document.body.classList.remove("lightbox-open");
+    }
+
+    function showImage() {
+      if (!currentImages.length) return;
+      const img = currentImages[currentIndex];
+      imgEl.src = img.src;
+      imgEl.alt = img.alt || "";
+      counter.textContent = `${currentIndex + 1} / ${currentImages.length}`;
+      prevBtn.style.display = currentImages.length > 1 ? "" : "none";
+      nextBtn.style.display = currentImages.length > 1 ? "" : "none";
+    }
+
+    function prevImage() {
+      if (currentImages.length < 2) return;
+      currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+      showImage();
+    }
+
+    function nextImage() {
+      if (currentImages.length < 2) return;
+      currentIndex = (currentIndex + 1) % currentImages.length;
+      showImage();
+    }
+
+    document.querySelectorAll(".grid img").forEach((img) => {
+      img.style.cursor = "pointer";
+      img.addEventListener("click", () => {
+        const grid = img.closest(".grid");
+        if (!grid) return;
+        const siblings = Array.from(grid.querySelectorAll("img"));
+        const idx = siblings.indexOf(img);
+        if (idx === -1) return;
+        openLightbox(siblings, idx);
+      });
+    });
+
+    closeBtn.addEventListener("click", closeLightbox);
+    prevBtn.addEventListener("click", prevImage);
+    nextBtn.addEventListener("click", nextImage);
+
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay || e.target === imgEl.parentElement) closeLightbox();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (overlay.classList.contains("opacity-0")) return;
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") prevImage();
+      if (e.key === "ArrowRight") nextImage();
+    });
+  });
+</script>

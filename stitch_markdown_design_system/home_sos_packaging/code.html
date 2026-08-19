@@ -1,0 +1,513 @@
+<!DOCTYPE html><html lang="en" class="scroll-smooth"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-on-surface": "#eff1ec",
+                      "border-gray": "#e0e0e0",
+                      "surface-bright": "#f8faf4",
+                      "on-surface-variant": "#404941",
+                      "accent-gold-dark": "#d4a520",
+                      "tertiary-container": "#773741",
+                      "tertiary-fixed-dim": "#ffb2bb",
+                      "secondary-fixed": "#a5f4b9",
+                      "surface-container-low": "#f2f4ef",
+                      "secondary-fixed-dim": "#8ad79f",
+                      "outline": "#717971",
+                      "on-secondary-fixed-variant": "#00522a",
+                      "secondary-container": "#a2f1b6",
+                      "on-tertiary-fixed": "#3b0713",
+                      "on-tertiary-fixed-variant": "#72333d",
+                      "accent-gold": "#e8b830",
+                      "tertiary": "#5b212b",
+                      "tertiary-fixed": "#ffd9dc",
+                      "on-error": "#ffffff",
+                      "primary": "#003e1e",
+                      "background": "#f8faf4",
+                      "on-secondary": "#ffffff",
+                      "surface-container": "#ecefe9",
+                      "on-secondary-fixed": "#00210d",
+                      "on-primary-container": "#8dca9c",
+                      "surface-variant": "#e1e3de",
+                      "surface-container-high": "#e7e9e3",
+                      "on-error-container": "#93000a",
+                      "on-surface": "#191c19",
+                      "inverse-primary": "#97d5a6",
+                      "primary-fixed-dim": "#97d5a6",
+                      "surface-dim": "#d8dbd5",
+                      "on-primary-fixed": "#00210e",
+                      "on-primary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "on-secondary-container": "#227041",
+                      "surface": "#f8faf4",
+                      "surface-container-lowest": "#ffffff",
+                      "neutral-dark": "#1a1a1a",
+                      "outline-variant": "#c0c9bf",
+                      "inverse-surface": "#2e312e",
+                      "surface-tint": "#2f6a44",
+                      "surface-gray": "#f5f5f5",
+                      "on-tertiary": "#ffffff",
+                      "primary-fixed": "#b2f1c1",
+                      "surface-container-highest": "#e1e3de",
+                      "primary-container": "#1a5632",
+                      "error-container": "#ffdad6",
+                      "on-primary-fixed-variant": "#14512e",
+                      "secondary": "#1c6c3d",
+                      "on-tertiary-container": "#faa4ae",
+                      "on-background": "#191c19"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "2rem",
+                      "container-max": "1280px",
+                      "margin-mobile": "1rem",
+                      "section-gap-lg": "6rem",
+                      "section-gap-md": "4rem"
+              },
+              "fontFamily": {
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "headline-xl": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Inter"
+                      ],
+                      "display-lg-mobile": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-xl": [
+                              "36px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "headline-lg": [
+                              "30px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      }catch(_e){}</script><meta charset="utf-8"></head><body class="bg-background text-on-surface font-body-md antialiased pt-20">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-gutter max-w-container-max mx-auto h-20 bg-surface-container-lowest border-b border-border-gray shadow-sm">
+<div class="font-headline-md text-headline-md font-bold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;" data-original-icon="package_2">package_2</span>
+            SOS Packaging
+        </div>
+<nav class="hidden md:flex gap-8 items-center h-full">
+<a href="#" class="font-label-md text-label-md uppercase tracking-wider text-primary border-b-2 border-accent-gold pb-1 h-full flex items-center pt-1 transition-colors duration-200">Home</a>
+<a href="#profile" class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-accent-gold transition-colors duration-200 h-full flex items-center">Profile</a>
+<a href="#products" class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-accent-gold transition-colors duration-200 h-full flex items-center">Products</a>
+<a href="#clients" class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-accent-gold transition-colors duration-200 h-full flex items-center">Clients</a>
+<a href="#contact" class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-accent-gold transition-colors duration-200 h-full flex items-center">Contact</a>
+</nav>
+<a href="#contact" class="hidden md:flex bg-accent-gold text-neutral-dark font-label-md text-label-md uppercase px-6 py-3 rounded hover:bg-accent-gold-dark hover:shadow-soft transition-all duration-200 cursor-pointer active:scale-95">
+            Get a Quote
+        </a>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</header>
+<!-- Mobile Nav Overlay (Hidden by default) -->
+<div id="mobile-nav" class="fixed inset-0 bg-surface-container-lowest z-40 hidden flex-col pt-24 px-margin-mobile">
+<nav class="flex flex-col gap-6 items-start">
+<a href="#" class="font-headline-md text-headline-md text-primary font-bold border-b-2 border-accent-gold pb-2 w-full">Home</a>
+<a href="#profile" class="font-headline-md text-headline-md text-on-surface-variant w-full">Profile</a>
+<a href="#products" class="font-headline-md text-headline-md text-on-surface-variant w-full">Products</a>
+<a href="#clients" class="font-headline-md text-headline-md text-on-surface-variant w-full">Clients</a>
+<a href="#contact" class="font-headline-md text-headline-md text-on-surface-variant w-full">Contact</a>
+<a href="#contact" class="mt-8 bg-accent-gold text-neutral-dark font-label-md text-label-md uppercase px-6 py-4 rounded w-full text-center hover:bg-accent-gold-dark transition-colors">Get a Quote</a>
+</nav>
+</div>
+<main>
+<!-- Hero Section -->
+<section class="relative bg-surface-gray py-section-gap-lg md:py-32 overflow-hidden flex items-center min-h-[80vh]">
+<div class="absolute inset-0 z-0 opacity-20">
+<div class="bg-cover bg-center w-full h-full" data-alt="A macro shot of brushed stainless steel coils stacked meticulously in a modern, well-lit industrial warehouse. Soft, natural light streams in from high clerestory windows, highlighting the gleaming metallic surfaces and conveying a sense of clean, efficient, and heavy-duty manufacturing. The mood is professional and engineered, leaning into a pristine light-mode aesthetic with subtle shadows." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCmmpniqYhObev2Y2O6qfkGWZRbVSXa5EtjjSqlLtvmzQyq7cOb02sEu2-d1YNO_gfWMO5Rcpf2MMJoQ05s7S2qiCXSI_mauEZ3zMUTNZeqlbB-qysJiK74fVBCwWyMTT8fsLMNoZJsy7zCGUvRIVO8DHValBT0WSfCR-56PN0kx1msvLs6xaJnMBaSbqNbfOQGZD16MmRFbK2Sd8PgBWVaInTX77JuQb4irblID_Atl0USPKooVBxs')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-gray via-surface-gray/90 to-transparent"></div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter relative z-10 w-full">
+<div class="max-w-3xl">
+<div class="inline-flex items-center gap-2 px-4 py-2 bg-surface-container-low rounded-full mb-6 border border-border-gray">
+<span class="material-symbols-outlined text-primary-container text-sm" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Save Wood, Go Green</span>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6 text-balance">
+                        Sustainable <span class="text-primary-container">Steel Packaging</span> Solutions
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl">
+                        Engineered precision meets environmental responsibility. We provide heavy-duty steel cable drums and process containers designed to replace traditional wood packaging, offering superior durability and a lower carbon footprint for industrial leaders.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-accent-gold text-neutral-dark font-label-md text-label-md uppercase px-8 py-4 rounded hover:bg-accent-gold-dark shadow-soft hover:-translate-y-1 transition-all duration-300 text-center flex items-center justify-center gap-2 md:px-12 md:py-5 font-bold" href="#contact">
+                            Get a Quote
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<a class="bg-surface-container-lowest text-primary font-label-md text-label-md uppercase px-8 py-4 rounded border border-border-gray hover:border-primary-container hover:shadow-soft transition-all duration-300 text-center flex items-center justify-center" href="#products">
+                            Explore Products
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section class="py-section-gap-md bg-surface-container-lowest relative z-20 -mt-10 mx-margin-mobile md:mx-gutter max-w-container-max md:mx-auto rounded-xl shadow-soft border border-border-gray/50">
+<div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-border-gray">
+<div class="p-8 flex flex-col items-start gap-4 group cursor-pointer">
+<div class="w-14 h-14 rounded-full bg-[#2D7A4A] flex items-center justify-center text-white mb-2 group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">design_services</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Custom Requests</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Tailored steel drum dimensions and specifications designed precisely to your engineering constraints.</p>
+</div>
+<div class="p-8 flex flex-col items-start gap-4 group cursor-pointer">
+<div class="w-14 h-14 rounded-full bg-[#2D7A4A] flex items-center justify-center text-white mb-2 group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">ISO 9001 Certified</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Stringent quality management ensuring reliable, defect-free heavy-duty packaging for every order.</p>
+</div>
+<div class="p-8 flex flex-col items-start gap-4 group cursor-pointer">
+<div class="w-14 h-14 rounded-full bg-[#2D7A4A] flex items-center justify-center text-white mb-2 group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">factory</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">High Capacity</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Robust production lines capable of fulfilling large-scale industrial orders with rapid turnaround times.</p>
+</div>
+</div>
+</section>
+<!-- Products Grid -->
+<section class="py-section-gap-lg px-margin-mobile md:px-gutter max-w-container-max mx-auto bg-surface-bright" id="products">
+<div class="text-center mb-16">
+<span class="font-label-md text-label-md text-primary-container uppercase tracking-widest block mb-2">Our Capabilities</span>
+<h2 class="font-headline-xl text-headline-xl text-primary">Engineered Steel Solutions</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Product 1 -->
+<div class="bg-surface-container-lowest rounded border border-border-gray overflow-hidden hover:shadow-hover transition-all duration-300 group flex flex-col h-full">
+<div class="h-48 w-full bg-surface-container-low relative overflow-hidden">
+<img class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" data-alt="A pristine, heavy-duty steel cable drum standing upright in a clean industrial facility. The corrugated steel flanges reflect bright, natural white light. The setting implies precision engineering and durability, adhering to a modern industrial light-mode aesthetic with deep green and subtle gold accent shadows in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiRmYrdwQvgqf1cFOp4ZcA0e7_uk8YWo2F1C4pxH0r4OY8Z4aH5bAgh1AwkrlUv1QqErZ3aZ0MruiI2Fd6_hcTiVgAasKZVq17_KdyepYwxGmFDjT8lJGL3ux9I7D-E_IA2Kv79VGNwKt5Js-JJDFPTAJupa-dVTr9RZeukMCxBszjUPBAcbCSCKdGFx2W5v5sBmRlT4AiB6Zdj5P_NGAL1LnuYrqGvM2HKGeLwFdsnHnxVBv61gu9">
+</div>
+<div class="p-6 flex flex-col flex-grow flex-wrap">
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Steel Cable Drums</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Heavy-duty structural integrity for safe transport and storage of high-tension cables and wires.</p>
+<a class="font-label-md text-label-md text-primary-container uppercase flex items-center gap-1 group-hover:text-primary transition-colors" href="#">
+                            View Specs <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a><a class="font-label-md text-label-md text-accent-gold-dark uppercase flex items-center gap-1 hover:text-accent-gold transition-colors ml-auto" href="#contact">Request Quote <span class="material-symbols-outlined text-sm">request_quote</span></a>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="bg-surface-container-lowest rounded border border-border-gray overflow-hidden hover:shadow-hover transition-all duration-300 group flex flex-col h-full">
+<div class="h-48 w-full bg-surface-container-low relative overflow-hidden">
+<img class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" data-alt="A row of corrugated steel drums neatly aligned on a warehouse floor. The corrugated ridges catch the cool, high-key lighting, emphasizing their rigid structure. The overall mood is organized and robust, utilizing a palette of silver-grays against a pristine white and light gray background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyNROV4P4f1u2ce7JEDXlrqWqYed3ymxt7uv-ArugrkN8V2vc3KxaZanhQdm9HW-RBpLwqSZTjEo6qsE2vTr2kqD2httDFJI-hZ00Lg4C2mrVa7CGDpmZlbkPs5LiIVGx3fWbhKmRea6OWY-XlXOMXma3z0QUSlrjugf8M1ahr8HgjZW9H-HHxRdo7yImBnmrlYnLjzDGQNPgo5SUnTJzrZhJScmDivxxqfQxPyzhDX9Blgn4SKty0">
+</div>
+<div class="p-6 flex flex-col flex-grow flex-wrap">
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Corrugated Drums</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Ribbed design providing exceptional strength-to-weight ratio for rigorous industrial handling.</p>
+<a class="font-label-md text-label-md text-primary-container uppercase flex items-center gap-1 group-hover:text-primary transition-colors" href="#">
+                            View Specs <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a><a class="font-label-md text-label-md text-accent-gold-dark uppercase flex items-center gap-1 hover:text-accent-gold transition-colors ml-auto" href="#contact">Request Quote <span class="material-symbols-outlined text-sm">request_quote</span></a>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="bg-surface-container-lowest rounded border border-border-gray overflow-hidden hover:shadow-hover transition-all duration-300 group flex flex-col h-full">
+<div class="h-48 w-full bg-surface-container-low relative overflow-hidden">
+<img class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" data-alt="Close-up of a precision-machined mild steel (M.S.) spool. The smooth metallic surfaces are illuminated by soft, diffused studio lighting, showcasing the engineering accuracy. The background is a clean, minimal light gray, enhancing the modern, premium industrial feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_LvKtQOMFYfFBU7WnabpkVznl_-UOWsFdE0VtRUd5tQfmvjRXVHHn-NEJQs0SHSFyJiSCH1OsXJ0IW996L-pwOz2KtlWf0fRLMF49HA72LDyzGH3s8o0NrVKRwdIB2XzBy6RiRMJwwtXUTB6uOwgIXQvWdGL6Y-bvtK8gIAzkL3tBZbsXFz6aLKztBuwTnvmHFcA1TrE0emZSYzyOgWJGqz0J0nmDgH1RySX8bDRIgSVFYjJFKo3O">
+</div>
+<div class="p-6 flex flex-col flex-grow flex-wrap">
+<h3 class="font-headline-md text-headline-md text-primary mb-3">M.S Spools</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Precision-machined mild steel spools designed for high-speed winding and unwinding processes.</p>
+<a class="font-label-md text-label-md text-primary-container uppercase flex items-center gap-1 group-hover:text-primary transition-colors" href="#">
+                            View Specs <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a><a class="font-label-md text-label-md text-accent-gold-dark uppercase flex items-center gap-1 hover:text-accent-gold transition-colors ml-auto" href="#contact">Request Quote <span class="material-symbols-outlined text-sm">request_quote</span></a>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="bg-surface-container-lowest rounded border border-border-gray overflow-hidden hover:shadow-hover transition-all duration-300 group flex flex-col h-full">
+<div class="h-48 w-full bg-surface-container-low relative overflow-hidden">
+<img class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" data-alt="A specialized steel process drum with specialized valves and fittings, standing in an open, bright factory setting. The lighting emphasizes the clean, unpainted steel finish, conveying hygienic and specialized industrial application. Deep green structural elements are visible in the far, out-of-focus background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh1MJfSillQsW6P07qvoFKGD6cjEXGlCjcuKjn-RlXQBoiP3zHnKRfAHH5o17acvFiL5S1UdMiqDnJ1zFU5XuvPmz1e9uR_uYSJlV4ldbF7aqAh6MU3-U1T08L2kmQfrWDunYIaJ-TpHy_LSkNkb8trYKismH_ff7jdjoYxngQiVHdLW7L1hYI2MnzpDlJhszeefWC14IxtEehtl3ScQh23l_aeSgez3NW_xAEz0CnOBHFmWIqoaJc">
+</div>
+<div class="p-6 flex flex-col flex-grow flex-wrap">
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Process Drums</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Specialized steel containers customized for internal manufacturing and chemical processes.</p>
+<a class="font-label-md text-label-md text-primary-container uppercase flex items-center gap-1 group-hover:text-primary transition-colors" href="#">
+                            View Specs <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a><a class="font-label-md text-label-md text-accent-gold-dark uppercase flex items-center gap-1 hover:text-accent-gold transition-colors ml-auto" href="#contact">Request Quote <span class="material-symbols-outlined text-sm">request_quote</span></a>
+</div>
+</div>
+</div>
+</section>
+<!-- Company Profile & About Us -->
+<section class="py-section-gap-lg px-margin-mobile md:px-gutter bg-surface-gray" id="profile">
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="rounded-xl overflow-hidden shadow-soft">
+<img class="w-full h-auto object-cover rounded-xl" data-alt="A wide angle shot of the modern SOS Packaging manufacturing facility. Sunlight pours through large skylights onto rows of gleaming steel drums being assembled. Workers in clean, professional gear operate advanced machinery. The aesthetic is bright, organized, and eco-conscious, with subtle green brand accents subtly integrated into the facility architecture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9pyP_9KWdZa0UoiRoSct3Cj0dFdrR_p0oocgVSMxlU6a6LHi4nuvp7aK6y2t2OVFi6Z5TXKP6X3MoXP6F9qErNnNH_cK_8mBqjEG29C-Whz6DkmXOPDfW3vZVgWkfVylzhgZAkPYhRhGX5Hqg2fmSJ-mqUZgHQGfP1_Z2sTzdcxBqQQWQFUJo96T0feng_tgR6A6ni18NXbOhDAia3uVSs1NDKI6P5reWPLM16JwRAvqRJpp4iWC0">
+</div>
+<div class="absolute -bottom-8 -right-8 bg-surface-container-lowest p-8 rounded-lg shadow-soft border border-border-gray hidden md:block">
+<div class="font-display-lg text-display-lg text-primary-container leading-none">2008</div>
+<div class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant mt-2">Established</div>
+</div>
+</div>
+<div>
+<h2 class="font-headline-xl text-headline-xl text-primary mb-6">Forging a Sustainable Future Since 2008</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
+                        SOS Packaging was founded with a clear mission: to disrupt the traditional reliance on wood in industrial packaging. We recognized early on that durability shouldn't come at the cost of our forests.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                        By engineering high-quality, reusable steel drums and spools, we provide our B2B partners with packaging solutions that are stronger, safer, and inherently sustainable. Our "Save Wood, Go Green" philosophy drives every aspect of our manufacturing process.
+                    </p>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary-container mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<h4 class="font-label-md text-label-md text-primary mb-1">Eco-Friendly Focus</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Replacing single-use wood with infinitely recyclable steel.</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary-container mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<h4 class="font-label-md text-label-md text-primary mb-1">Engineering Excellence</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Precision manufacturing meeting strict global standards.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Certifications & Memberships -->
+<section class="py-16 bg-primary text-on-primary">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="flex flex-col md:flex-row items-center justify-between gap-12">
+<div class="md:w-1/3">
+<h3 class="font-headline-lg text-headline-lg mb-2 text-accent-gold">Certified Quality</h3>
+<p class="font-body-md text-body-md text-on-primary-container">Our commitment to excellence is verified by leading international standards organizations.</p>
+</div>
+<div class="md:w-2/3 flex flex-wrap justify-center md:justify-end gap-12 items-center opacity-80 hover:opacity-100 transition-opacity">
+<!-- TUV Rheinland Placeholder -->
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-5xl">verified_user</span>
+<div class="font-label-md text-label-md uppercase tracking-wider">TUV Rheinland<br>Certified</div>
+</div>
+<!-- ISO Placeholder -->
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-5xl">workspace_premium</span>
+<div class="font-label-md text-label-md uppercase tracking-wider">ISO 9001:2015<br>Quality Management</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact & Quote Form -->
+<section class="py-section-gap-lg px-margin-mobile md:px-gutter max-w-container-max mx-auto" id="contact">
+<div class="bg-surface-container-lowest rounded-xl shadow-soft border border-border-gray overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-5">
+<!-- Contact Info -->
+<div class="lg:col-span-2 bg-surface-container-low p-10 flex flex-col justify-between">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Let's Discuss Your Packaging Needs</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-12">
+                                Provide us with your technical specifications, and our engineering team will provide a tailored, sustainable steel packaging solution.
+                            </p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-outline mb-1">Headquarters</div>
+<div class="font-label-md text-label-md text-primary">Industrial Estate, Plot 42<br>Global Trade District</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-outline mb-1">Email Us</div>
+<div class="font-label-md text-label-md text-primary">quotes@sospackaging.com</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-outline mb-1">Call Us</div>
+<div class="font-label-md text-label-md text-primary">+1 (555) 123-4567</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Quote Form -->
+<div class="lg:col-span-3 p-10">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label-sm text-label-sm uppercase text-primary mb-2">Company Name *</label>
+<input class="w-full bg-surface-bright border border-border-gray rounded px-4 py-3 font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container focus:border-primary-container transition-all" placeholder="Acme Corp" type="text">
+</div>
+<div>
+<label class="block font-label-sm text-label-sm uppercase text-primary mb-2">Contact Person *</label>
+<input class="w-full bg-surface-bright border border-border-gray rounded px-4 py-3 font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container focus:border-primary-container transition-all" placeholder="Jane Doe" type="text">
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label-sm text-label-sm uppercase text-primary mb-2">Email Address *</label>
+<input class="w-full bg-surface-bright border border-border-gray rounded px-4 py-3 font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container focus:border-primary-container transition-all" placeholder="jane@acme.com" type="email">
+</div>
+<div>
+<label class="block font-label-sm text-label-sm uppercase text-primary mb-2">Product Interest</label>
+<select class="w-full bg-surface-bright border border-border-gray rounded px-4 py-3 font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container focus:border-primary-container transition-all">
+<option>Steel Cable Drums</option>
+<option>Corrugated Drums</option>
+<option>M.S Spools</option>
+<option>Process Drums</option>
+<option>Custom Request</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm uppercase text-primary mb-2">Technical Specifications / Message</label>
+<textarea class="w-full bg-surface-bright border border-border-gray rounded px-4 py-3 font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container focus:border-primary-container transition-all" placeholder="Please provide details regarding dimensions, load capacity, or specific engineering requirements..." rows="4"></textarea>
+</div>
+<button class="bg-accent-gold text-neutral-dark font-label-md text-label-md uppercase px-8 py-4 rounded hover:bg-accent-gold-dark hover:shadow-soft transition-all duration-200 w-full md:w-auto" type="submit">
+                                Request a Quote
+                            </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap-md px-gutter flex flex-col md:flex-row justify-between items-start max-w-container-max mx-auto bg-primary text-on-primary">
+<div class="mb-8 md:mb-0">
+<div class="font-headline-md text-headline-md text-accent-gold mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">package_2</span>
+                SOS Packaging
+            </div>
+<p class="font-body-md text-body-md text-on-primary-container max-w-xs mb-4">Sustainable industrial steel packaging solutions engineered for a greener future.</p>
+<p class="font-body-md text-body-md text-on-primary-container text-sm opacity-80">© 2024 SOS Packaging. Sustainable Industrial Solutions.</p>
+</div>
+<div class="flex flex-wrap gap-8 md:gap-16">
+<div class="flex flex-col gap-3">
+<a class="font-body-md text-body-md text-on-primary-container hover:text-accent-gold-dark underline transition-all" href="#">Sustainability Report</a>
+<a class="font-body-md text-body-md text-on-primary-container hover:text-accent-gold-dark underline transition-all" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col gap-3">
+<a class="font-body-md text-body-md text-on-primary-container hover:text-accent-gold-dark underline transition-all" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-primary-container hover:text-accent-gold-dark underline transition-all" href="#">Technical Specs</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple mobile menu toggle logic
+        document.querySelector('button.md\\:hidden').addEventListener('click', function() {
+            const mobileNav = document.getElementById('mobile-nav');
+            if (mobileNav.classList.contains('hidden')) {
+                mobileNav.classList.remove('hidden');
+                mobileNav.classList.add('flex');
+            } else {
+                mobileNav.classList.add('hidden');
+                mobileNav.classList.remove('flex');
+            }
+        });
+        
+        // Close mobile nav on link click
+        document.querySelectorAll('#mobile-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                const mobileNav = document.getElementById('mobile-nav');
+                mobileNav.classList.add('hidden');
+                mobileNav.classList.remove('flex');
+            });
+        });
+    </script>
+
+</body></html>

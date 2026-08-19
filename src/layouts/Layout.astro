@@ -1,0 +1,348 @@
+---
+import "../styles/global.css";
+import { ClientRouter } from "astro:transitions";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+
+export interface Props {
+  title: string;
+  description?: string;
+  canonical?: string;
+}
+
+const { title, description, canonical } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" transition:animate="fade">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} | SHREE OM SAI PACKAGING</title>
+    {description && <meta name="description" content={description} />}
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonical || `https://www.sospackaging.com${Astro.url.pathname}`} />
+    <link rel="icon" href="/images/actual/sosp%20logo.webp" type="image/jpeg" />
+    <link rel="shortcut icon" href="/images/actual/sosp%20logo.webp" type="image/jpeg" />
+
+    <ClientRouter />
+    <meta property="og:title" content={`${title} | SHREE OM SAI PACKAGING`} />
+    <meta property="og:description" content={description || "Shree Om Sai Packaging - Sustainable industrial steel packaging solutions engineered for a greener future."} />
+    <meta property="og:image" content="https://www.sospackaging.com/images/actual/hero_6.webp" />
+    <meta property="og:url" content={canonical || `https://www.sospackaging.com${Astro.url.pathname}`} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_IN" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={`${title} | SHREE OM SAI PACKAGING`} />
+    <meta name="twitter:description" content={description || "Shree Om Sai Packaging - Sustainable industrial steel packaging solutions engineered for a greener future."} />
+    <meta name="twitter:image" content="https://www.sospackaging.com/images/actual/hero_6.webp" />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.sospackaging.com/#organization",
+          "name": "Shree Om Sai Packaging",
+          "url": "https://www.sospackaging.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.sospackaging.com/images/actual/sosp%20logo.webp"
+          },
+          "description": "Sustainable industrial steel packaging solutions engineered for a greener future.",
+          "address": [
+            {
+              "@type": "PostalAddress",
+              "streetAddress": "Plot No. F-596, M.I.A. Extension",
+              "addressLocality": "Alwar",
+              "addressRegion": "Rajasthan",
+              "postalCode": "301030",
+              "addressCountry": "IN"
+            },
+            {
+              "@type": "PostalAddress",
+              "streetAddress": "Plot No B-65 (A), M.I.A.",
+              "addressLocality": "Alwar",
+              "addressRegion": "Rajasthan",
+              "postalCode": "301030",
+              "addressCountry": "IN"
+            }
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-144-2881561",
+            "email": "info@sospackaging.com",
+            "contactType": "customer service",
+            "availableLanguage": ["en", "hi"]
+          },
+          "sameAs": []
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://www.sospackaging.com/#localbusiness",
+          "parentOrganization": { "@id": "https://www.sospackaging.com/#organization" },
+          "name": "Shree Om Sai Packaging",
+          "description": "Manufacturer of corrugated steel cable drums, process drums, MS tie rods, and hybrid drums for industrial cabling and wire sectors.",
+          "url": "https://www.sospackaging.com",
+          "telephone": "+91-144-2881561",
+          "email": "info@sospackaging.com",
+          "image": "https://www.sospackaging.com/images/actual/hero_6.webp",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Plot No. F-596, M.I.A. Extension",
+            "addressLocality": "Alwar",
+            "addressRegion": "Rajasthan",
+            "postalCode": "301030",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "27.5663",
+            "longitude": "76.6081"
+          },
+          "openingHoursSpecification": [
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "09:00", "closes": "18:00" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "09:00", "closes": "18:00" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "09:00", "closes": "18:00" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "09:00", "closes": "18:00" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "09:00", "closes": "18:00" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+          ],
+          "areaServed": "IN",
+          "award": [
+            "ZED Gold Certification — First ZED Gold Certified Steel Cable Drum Unit in India",
+            "Tally Award",
+            "MSME Award",
+            "PNB Award",
+            "State Safety Award (2022, 2023 & 2024) — Factories & Boilers Department, Rajasthan",
+            "ISO 9001:2015 — Quality Management System (TUV Rheinland)",
+            "ISO 14001:2015 — Environmental Management System (TUV Rheinland)",
+            "ISO 45001:2018 — Occupational Health & Safety Management System (TUV Rheinland)"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Steel Packaging Products",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Corrugated Steel Cable Drum" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Process Drum" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "MS Tie Rod" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Hybrid Drum" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Export Drum" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Refurbished Drum" } }
+            ]
+          }
+        }
+      ]
+    })} />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://script.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; frame-src https://www.google.com; connect-src 'self' https://script.google.com; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+  </head>
+  <body data-page="default" class="bg-background text-on-surface antialiased pt-[116px]">
+    <div id="page-loader" class="fixed inset-0 z-[100] bg-background flex flex-col items-center justify-center transition-opacity duration-500">
+      <div class="relative flex flex-col items-center">
+        <!-- Steel Cable Drum SVG - front-facing rotating drum -->
+        <div class="relative w-44 h-44 mb-6">
+          <svg viewBox="0 0 160 160" class="w-full h-full overflow-visible" style="filter: drop-shadow(0 8px 24px rgba(0,0,0,0.35));">
+            <defs>
+              <linearGradient id="rimGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#7a8a9c" />
+                <stop offset="25%" stop-color="#4a5a6c" />
+                <stop offset="60%" stop-color="#2a3a4c" />
+                <stop offset="100%" stop-color="#0a1a2c" />
+              </linearGradient>
+              <radialGradient id="hubGrad" cx="0.35" cy="0.35" r="0.6">
+                <stop offset="0%" stop-color="#8a9aac" />
+                <stop offset="40%" stop-color="#4a5a6c" />
+                <stop offset="100%" stop-color="#0a1a2c" />
+              </radialGradient>
+            </defs>
+
+            <g class="drum-rotating" style="transform-origin: 80px 80px;">
+              <!-- Drop shadow behind drum -->
+              <circle cx="82" cy="84" r="72" fill="#000" opacity="0.25" />
+
+              <!-- CORRUGATED OUTER RING (80%-100% of radius) -->
+              <path d="M 80 8 A 72 72 0 1 1 80 152 A 72 72 0 1 1 80 8 Z M 80 22 A 58 58 0 1 0 80 138 A 58 58 0 1 0 80 22 Z" fill="url(#rimGrad)" fill-rule="evenodd" />
+              <circle cx="80" cy="80" r="72" fill="none" stroke="#0a1a2c" stroke-width="2" />
+              <path d="M 8 80 A 72 72 0 0 1 152 80" fill="none" stroke="#a0b0c0" stroke-width="2" opacity="0.3" />
+              <path d="M 8 80 A 72 72 0 0 0 152 80" fill="none" stroke="#0a1a2c" stroke-width="2.5" opacity="0.5" />
+              <!-- Corrugated ridge rings -->
+              <circle cx="80" cy="80" r="59.5" fill="none" stroke="#5a6a7c" stroke-width="1.5" opacity="0.5" />
+              <circle cx="80" cy="80" r="61" fill="none" stroke="#8a9aac" stroke-width="1.5" opacity="0.25" />
+              <circle cx="80" cy="80" r="62.5" fill="none" stroke="#2a3a4c" stroke-width="2" opacity="0.35" />
+              <circle cx="80" cy="80" r="64" fill="none" stroke="#8a9aac" stroke-width="1.5" opacity="0.25" />
+              <circle cx="80" cy="80" r="65.5" fill="none" stroke="#2a3a4c" stroke-width="2" opacity="0.35" />
+              <circle cx="80" cy="80" r="67" fill="none" stroke="#8a9aac" stroke-width="1.5" opacity="0.25" />
+              <circle cx="80" cy="80" r="68.5" fill="none" stroke="#2a3a4c" stroke-width="2" opacity="0.35" />
+              <circle cx="80" cy="80" r="70" fill="none" stroke="#8a9aac" stroke-width="1.5" opacity="0.25" />
+
+              <!-- SPOKES (8 spokes radiating from hub, ending at 80% of radius) -->
+              <g>
+                <defs>
+                  <g id="spoke">
+                    <path d="M 98 74 L 137 71 L 137 89 L 98 86 Z" fill="#4a5a6c" />
+                    <path d="M 98 74 L 137 71 L 137 74 L 98 78 Z" fill="#8a9aac" opacity="0.5" />
+                    <path d="M 98 82 L 137 85 L 137 89 L 98 86 Z" fill="#1a2a3c" opacity="0.4" />
+                  </g>
+                </defs>
+                <use href="#spoke" />
+                <use href="#spoke" transform="rotate(45 80 80)" />
+                <use href="#spoke" transform="rotate(90 80 80)" />
+                <use href="#spoke" transform="rotate(135 80 80)" />
+                <use href="#spoke" transform="rotate(180 80 80)" />
+                <use href="#spoke" transform="rotate(225 80 80)" />
+                <use href="#spoke" transform="rotate(270 80 80)" />
+                <use href="#spoke" transform="rotate(315 80 80)" />
+              </g>
+
+              <!-- CENTER HUB -->
+              <circle cx="80" cy="80" r="18" fill="#000" opacity="0.3" />
+              <circle cx="80" cy="80" r="18" fill="url(#hubGrad)" />
+              <circle cx="80" cy="80" r="18" fill="none" stroke="#1a2a3c" stroke-width="1.5" />
+              <path d="M 62 80 A 18 18 0 0 1 98 80" fill="none" stroke="#a0b0c0" stroke-width="1" opacity="0.35" />
+              <circle cx="80" cy="80" r="11" fill="#1a202c" />
+              <circle cx="80" cy="80" r="11" fill="none" stroke="#3a4a5c" stroke-width="1" />
+              <circle cx="80" cy="80" r="7" fill="#0a0a0a" />
+              <circle cx="80" cy="80" r="7" fill="none" stroke="#2a3a4c" stroke-width="0.5" />
+              <circle cx="80" cy="80" r="3" fill="#5a6a7c" />
+              <circle cx="79" cy="79" r="1.2" fill="#b0c0d0" opacity="0.5" />
+            </g>
+          </svg>
+        </div>
+
+        <!-- Loading Bar with cable track -->
+        <div class="flex items-center gap-3 w-64 relative">
+          <div class="flex-1 h-2 bg-surface-container-low rounded-full overflow-hidden relative">
+            <div id="loading-bar-inner" class="h-full bg-primary-container rounded-full relative" style="width:0%">
+              <div class="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-success-green rounded-full shadow-lg shadow-success-green/50"></div>
+            </div>
+          </div>
+          <span class="text-xs font-mono text-primary-container font-bold tabular-nums">
+            <span class="loading-percent">0</span>%
+          </span>
+        </div>
+        <div class="text-xs uppercase tracking-widest text-on-surface-variant font-semibold mt-4">
+          Shree Om Sai <span class="text-primary-container">Packaging</span>
+        </div>
+      </div>
+    </div>
+    <Header currentPath={Astro.url.pathname} />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+
+    <a
+      href={`https://wa.me/${import.meta.env.PUBLIC_WHATSAPP_NUMBER || '919662144062'}?text=${encodeURIComponent('Hi Shree Om Sai Packaging, I have an inquiry about steel cable drums.')}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="fixed bottom-6 left-6 w-14 h-14 bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 z-40 hover:-translate-y-1"
+      aria-label="Chat on WhatsApp"
+    >
+      <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </a>
+    <button
+      id="back-to-top"
+      class="fixed bottom-6 right-6 w-14 h-14 bg-success-green hover:bg-primary text-white rounded-full flex items-center justify-center shadow-lg transition-all duration-300 z-40 opacity-0 translate-y-4 pointer-events-none"
+      aria-label="Back to top"
+    >
+      <span class="material-symbols-outlined">expand_less</span>
+    </button>
+  </body>
+</html>
+
+<script>
+  const backToTop = document.getElementById("back-to-top");
+  if (backToTop) {
+    let ticking = false;
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    window.addEventListener("scroll", () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          if (window.scrollY > 400) {
+            backToTop.classList.remove("opacity-0", "translate-y-4", "pointer-events-none");
+          } else {
+            backToTop.classList.add("opacity-0", "translate-y-4", "pointer-events-none");
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+  }
+</script>
+
+<style is:global>
+  @keyframes drum-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .drum-rotating {
+    animation: drum-spin 12s ease-in-out forwards;
+  }
+</style>
+
+<script>
+  if (!window._sospInit) {
+    window._sospInit = true;
+
+    let loadingTimer;
+
+    document.addEventListener("astro:page-load", () => {
+      clearTimeout(loadingTimer);
+
+      const loader = document.getElementById("page-loader");
+      const percentEl = document.querySelector(".loading-percent");
+      const bar = document.getElementById("loading-bar-inner");
+      if (!loader || !percentEl || !bar) return;
+
+      percentEl.textContent = "0";
+      bar.style.width = "0%";
+
+      const drum = document.querySelector(".drum-rotating");
+      if (drum) {
+        drum.style.animation = "none";
+        void drum.offsetHeight;
+        drum.style.animation = "";
+      }
+
+      const start = performance.now();
+      const duration = 1800;
+      let stopped = false;
+      let pct = 0;
+
+      const interval = setInterval(() => {
+        if (stopped) return;
+        pct += Math.floor(Math.random() * 8) + 3;
+        if (pct > 99) pct = 99;
+        percentEl.textContent = pct;
+      }, 120);
+
+      function easeInOut(t) {
+        return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+      }
+
+      function frame() {
+        if (stopped) return;
+        const elapsed = performance.now() - start;
+        const progress = Math.min(elapsed / duration, 1);
+        bar.style.width = (easeInOut(progress) * 100) + "%";
+        if (progress < 1) requestAnimationFrame(frame);
+      }
+      requestAnimationFrame(frame);
+
+      loadingTimer = setTimeout(() => {
+        stopped = true;
+        clearInterval(interval);
+        percentEl.textContent = "100";
+        bar.style.width = "100%";
+        loader.style.opacity = "0";
+        setTimeout(() => loader.remove(), 500);
+      }, duration);
+    });
+  }
+</script>
