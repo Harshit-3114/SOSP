@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v7
+
+    - name: Set up Node
+      uses: actions/setup-node@v7
+      with:
+        node-version: "22"
+        cache: npm
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Build
+      # Astro renders every page to static HTML at build time, so a successful
+      # build is the real check: it catches broken imports, missing assets and
+      # malformed .astro files.
+      run: npm run build
+
+    - name: Check the build output
+      run: |
+        test -f dist/index.html
+        echo "built pages: $(find dist -name '*.html' | wc -l)"
+        find dist -name '*.html' | sort

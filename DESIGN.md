@@ -78,9 +78,9 @@ Redesign the SOS Packaging website UI. This is an industrial manufacturing compa
 
 Brand context:
 - Tagline: "Save Wood, Go Green" — eco-friendly value proposition
-- Established 2008, ISO 9001 certified (TUV Rheinland)
-- Based in Alwar, Rajasthan, India with 2 units (20,000 sq. ft. each)
-- Monthly capacity: 350-400 MT, daily: 45-50 drums
+- Established November 2008, ISO 9001:2015 certified (TUV Rheinland)
+- Based in Alwar, Rajasthan, India, with 4 units - 3 in Alwar, 1 in Reengus
+- Monthly capacity: 450-500 MT, roughly 1,500 drums per month, daily: 45-50 drums
 
 Design tokens to follow:
 - Primary: Deep green (#1a5632) — represents eco-friendliness and nature
@@ -89,8 +89,8 @@ Design tokens to follow:
 - Typography: Inter font family (headings bold/extrabold, body regular)
 
 Pages to design:
-1. HOME — Hero section with tagline, 3 feature cards (Custom Requests, ISO Certified, Capacity), products grid (4 products), company profile summary, memberships section, client section, contact info + quote form
-2. PROFILE — Company background, stats (350-400 MT, 45-50/day, 2008, ISO), future plan
+1. HOME — Hero section with tagline, 3 feature cards (Custom Requests, ISO Certified, Capacity), products grid (6 products), company profile summary, memberships section, client section, contact info + quote form
+2. PROFILE — Company background, stats (450-500 MT, ~1500 drums/month, 45-50/day, 2008, ISO, 4 units), future plan
 3. PRODUCTS — Product descriptions with alternating layout, product category grid
 4. CLIENTS — Company intro, bullet-point features list
 5. CONTACT — Address/phone/email on left, quote form on right
@@ -102,3 +102,12 @@ Design goals:
 - Easy navigation between products and contact/quote
 - Mobile-responsive, accessible
 ```
+
+---
+
+## Keeping this document honest
+
+The figures above are the ones the site actually shows. When the site's
+content changes — capacity, unit count, certifications — update this file in
+the same change, or the two drift apart and the redesign prompt ends up
+quoting numbers the company no longer publishes.
